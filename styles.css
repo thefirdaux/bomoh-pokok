@@ -507,7 +507,7 @@ ul {
   justify-content: center;
   width: 160px;
   padding: 10px;
-  background: var(--color-white);
+  background: var(--color-mint);
   border-radius: 99px;
   color: var(--color-black);
   font-size: 15px;
@@ -518,7 +518,7 @@ ul {
 }
 
 .service-card__btn:hover {
-  background: var(--color-mint);
+  background: var(--color-white);
 }
 
 .service-card__btn:active {
