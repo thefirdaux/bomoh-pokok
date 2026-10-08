@@ -4,8 +4,8 @@
   // Business WhatsApp number: country code + number, digits only
   var WHATSAPP_NUMBER = "60122760769";
 
-  // TODO: replace with the Google Business Profile reviews link.
-  var GOOGLE_REVIEW_URL = "https://www.google.com/search?q=Bomoh+Pokok+reviews";
+  // Google Maps listing with the business's reviews
+  var GOOGLE_REVIEW_URL = "https://maps.app.goo.gl/5fSHWMPzwuDBGJDp9";
 
   function whatsappUrl(service) {
     var message = service
