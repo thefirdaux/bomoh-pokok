@@ -440,6 +440,15 @@ ul {
   letter-spacing: -0.08px;
 }
 
+.services__areas {
+  margin-top: 4px;
+}
+
+.services__areas strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 .services__list {
   gap: 8px;
   margin-top: 25px;
