@@ -395,6 +395,8 @@ ul {
 
 .gallery__img {
   object-fit: cover;
+  /* Placeholder tint while a photo is still loading */
+  background: var(--color-border);
 }
 
 .gallery__img--half {

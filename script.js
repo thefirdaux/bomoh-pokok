@@ -120,6 +120,38 @@
     requestAnimationFrame(step);
   });
 
+  // Gallery photos past the first few blocks carry data-src and load only as they
+  // approach the visible part of the gallery (native lazy loading fetches far too early)
+  document.querySelectorAll(".gallery").forEach(function (gallery) {
+    var pending = gallery.querySelectorAll("img[data-src]");
+
+    function load(img) {
+      img.src = img.getAttribute("data-src");
+      img.removeAttribute("data-src");
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      Array.prototype.forEach.call(pending, load);
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          observer.unobserve(entry.target);
+          load(entry.target);
+        });
+      },
+      // About three blocks ahead of what's on screen
+      { root: gallery, rootMargin: "0px 1200px 0px 0px" }
+    );
+
+    Array.prototype.forEach.call(pending, function (img) {
+      observer.observe(img);
+    });
+  });
+
   // Numbers ("4.8", "500") roll up like an odometer the first time they're on screen.
   // data-count-from sets the starting reading (e.g. "0.1"); otherwise every digit starts at 0.
   var ODOMETER_SPINS = 2; // full 0–9 turns before landing
