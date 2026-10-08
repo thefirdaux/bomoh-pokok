@@ -5,7 +5,7 @@
   var WHATSAPP_NUMBER = "60122760769";
 
   // Google Maps listing with the business's reviews
-  var GOOGLE_REVIEW_URL = "https://maps.app.goo.gl/5fSHWMPzwuDBGJDp9";
+  var GOOGLE_REVIEW_URL = "https://maps.app.goo.gl/sbUfZrj76yN1f9YQ7";
 
   function whatsappUrl(service) {
     var message = service
