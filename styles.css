@@ -2,17 +2,19 @@
   --color-primary: #1b4332;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-highlight: #f8bd00;
-  --color-accent: #f38804;
+  --color-accent: #f88000;
+  --color-star: #f8bd00;
   --color-border: #e5e7eb;
+  --color-pill-border: #f5f5f5;
   --color-mint: #e8f1e9;
-  --color-muted: #4b5563;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-  --header-height: 67px;
+  --header-height: 68px;
   --gutter: 16px;
   --content-max: 1200px;
+  /* Side padding that keeps content in a centred column on wide screens */
+  --page-pad: max(var(--gutter), calc((100% - var(--content-max)) / 2 + var(--gutter)));
   --float-gap: 24px;
 }
 
@@ -59,16 +61,23 @@ ul {
   list-style: none;
 }
 
-/* Large Title/Emphasized */
+/* Title1/Emphasized (28px bold) */
 .section-title {
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 41px;
-  letter-spacing: 0.4px;
+  line-height: 33px;
+  letter-spacing: 0.38px;
 }
 
-.text-highlight {
-  color: var(--color-highlight);
+/* Body/Regular */
+.section-lead {
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.43px;
+}
+
+.text-accent {
+  color: var(--color-accent);
 }
 
 .visually-hidden {
@@ -86,14 +95,14 @@ ul {
 /* Odometer: each digit is a window onto a vertical 0–9 strip that rolls to its value.
    --digit-h matches the line height of the text it sits in. */
 .odometer {
-  --digit-h: 41px;
+  --digit-h: 33px;
   display: inline-flex;
   vertical-align: top;
   font-variant-numeric: tabular-nums;
 }
 
 .review-pill__score .odometer {
-  --digit-h: 16px;
+  --digit-h: 20px;
 }
 
 .odometer__digit,
@@ -157,6 +166,18 @@ ul {
   scroll-snap-type: none;
 }
 
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -174,13 +195,25 @@ ul {
   max-width: var(--content-max);
   height: var(--header-height);
   margin: 0 auto;
-  padding: 14px 20px 17px var(--gutter);
+  padding: 10px var(--gutter);
 }
 
 .brand {
   display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 48×48 frame with the 40×40 logo inset by 4px */
+.brand__logo {
+  flex-shrink: 0;
+  padding: 4px;
+}
+
+.brand__text {
+  display: flex;
   flex-direction: column;
-  width: 258px;
+  padding: 6px 0;
 }
 
 /* Subheadline/Emphasized */
@@ -191,27 +224,51 @@ ul {
   letter-spacing: -0.23px;
 }
 
-/* Caption1/Regular */
+/* Caption2/Regular */
 .brand__tagline {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.06px;
 }
 
 .menu-icon {
   display: block;
-  width: 20px;
-  height: 20px;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* Contact strip under the header (Subheadline/Regular) */
+.contact-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 10px var(--gutter);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+  text-align: center;
+}
+
+.contact-bar a {
+  white-space: nowrap;
+}
+
+.contact-bar a:hover,
+.contact-bar a:focus-visible {
+  text-decoration: underline;
 }
 
 /* ---------- Hero ---------- */
 
 .hero {
   position: relative;
-  height: 654px;
+  height: 744px;
   overflow: hidden;
+  background: var(--color-white);
 }
 
-/* Photo frame is 402×744; the bottom 90px tucks under the next section */
 .hero__media {
   position: absolute;
   top: 0;
@@ -235,62 +292,71 @@ ul {
   position: relative;
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 93px var(--gutter) 0;
+  padding: 98px 15px 0;
 }
 
 .hero__intro {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  width: 234px;
+  gap: 24px;
+  width: 226px;
 }
 
+.hero__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Title1/Emphasized */
 .hero__title {
-  color: var(--color-primary);
-  font-size: 34px;
-  font-weight: 800;
-  line-height: 41px;
-  letter-spacing: 0.4px;
+  padding: 10px 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0.38px;
 }
 
 .review-pill {
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 178px;
-  padding: 7px 11px;
+  width: 100%;
+  padding: 8px 16px;
   background: var(--color-white);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-pill-border);
   border-radius: 99px;
-  font-size: 12px;
-  line-height: 16px;
-  transition: box-shadow 0.2s ease;
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
+  /* Subheadline/Regular */
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+  transition: filter 0.2s ease;
 }
 
 .review-pill:hover,
 .review-pill:focus-visible {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.25));
   outline: none;
 }
 
-.review-pill__source,
-.review-pill__rating {
+.review-pill__source {
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-/* Caption1/Emphasized */
-.review-pill__score {
-  font-weight: 500;
+.review-pill__rating {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
 }
 
-/* Star sits inside a 16px frame, inset 0 2.45% 9.55% 2.45% */
+/* Star sits inside a 24px frame, inset 0 2.45% 9.55% 2.45% */
 .review-pill__star {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }
 
 .review-pill__star img {
@@ -299,47 +365,37 @@ ul {
   left: 2.45%;
 }
 
-/* Subheadline/Regular */
+/* Body/Regular */
 .hero__lead {
-  width: 202px;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: -0.23px;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.43px;
 }
 
 .features {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  width: 229px;
-  margin-top: 24px;
+  width: 224px;
+  margin-top: 46px;
 }
 
-/* Footnote/Regular */
+/* Subheadline/Regular; rows separated by a thin line */
 .feature {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 21px;
-  background: var(--color-primary);
-  border-radius: 32px;
-  color: var(--color-white);
-  font-size: 13px;
-  line-height: 18px;
-  letter-spacing: -0.08px;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-black);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.23px;
   white-space: nowrap;
-}
-
-.feature img {
-  flex-shrink: 0;
-}
-
-/* Pills appear one by one on load */
-.feature {
   animation: rise-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+.feature:last-child {
+  border-bottom: 0;
+}
+
+/* Rows appear one by one on load */
 .feature:nth-child(1) {
   animation-delay: 0.3s;
 }
@@ -352,32 +408,40 @@ ul {
   animation-delay: 0.9s;
 }
 
-/* Shared by the hero pills and the floating button */
-@keyframes rise-in {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
+.feature__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  border-radius: 8px;
 }
 
 /* ---------- Projects ---------- */
 
-.projects__title {
-  position: relative;
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 10px var(--gutter);
+.projects {
+  margin-top: 4px;
+  padding: 18px 0 31px;
   background: var(--color-white);
+}
+
+.projects__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 var(--page-pad);
+}
+
+.projects__title {
+  color: var(--color-primary);
 }
 
 .gallery {
   gap: 4px;
-  margin-top: 11px;
+  margin-top: 18px;
+  padding-left: var(--page-pad);
+  scroll-padding-left: var(--page-pad);
 }
 
 .gallery__group {
@@ -418,31 +482,21 @@ ul {
 /* ---------- Services ---------- */
 
 .services {
-  margin-top: 35px;
+  margin-top: 4px;
+  padding: 24px var(--page-pad);
 }
 
 .services__intro {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 0 17px 0 15px;
-}
-
-.services__title {
-  color: var(--color-primary);
-}
-
-/* Footnote/Regular */
-.services__text {
-  font-size: 13px;
-  line-height: 18px;
-  letter-spacing: -0.08px;
 }
 
 .services__areas {
   margin-top: 4px;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.23px;
 }
 
 .services__areas strong {
@@ -450,90 +504,163 @@ ul {
   font-weight: 600;
 }
 
-.services__list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: var(--content-max);
-  margin: 22px auto 0;
-  padding: 0 18px 0 12px;
-  list-style: none;
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
+  margin-top: 40px;
 }
 
-/* One service: Malay name with the English name underneath */
-.service-item {
+/* 177×177 white card; the name sits 46px from the top */
+.service-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  padding: 46px 10px 24px;
+  background: var(--color-white);
+  border-radius: 16px;
+  transition: transform 0.15s ease;
+}
+
+.service-tile:active {
+  transform: scale(0.98);
+}
+
+.service-tile:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Body/Emphasized */
+.service-tile__name {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.43px;
+}
+
+/* Illustration pokes out above the card's top-right corner (positions from the design) */
+.service-tile__art {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.service-tile__art img {
+  width: 100%;
+  height: 100%;
+}
+
+.service-tile__art--cantas {
+  top: -16px;
+  right: 18px;
+  width: 60px;
+  height: 60px;
+}
+
+.service-tile__art--tunggul {
+  top: -11px;
+  right: 4px;
+  width: 73px;
+  height: 50px;
+}
+
+.service-tile__art--tanah {
+  top: -11px;
+  right: 2px;
+  width: 76px;
+  height: 50px;
+}
+
+.service-tile__art--dron {
+  top: -17px;
+  right: 0;
+  width: 80px;
+  height: 50px;
+}
+
+.service-tile__art--dron img {
+  position: absolute;
+  left: -3.36%;
+  width: 103.36%;
+}
+
+.service-tile__art--rumput {
+  top: -4px;
+  right: 0;
+  width: 80px;
+  height: 35.56px;
+}
+
+.service-tile__art--rumput img {
+  position: absolute;
+  top: -19.44%;
+  left: -4.94%;
+  width: 108.64%;
+  height: 129.17%;
+}
+
+.service-tile__art--chainsaw {
+  top: -7px;
+  right: 0;
+  width: 80px;
+  height: 41px;
+}
+
+.service-tile__art--crane {
+  top: -12px;
+  right: 0;
+  width: 80px;
+  height: 51px;
+}
+
+/* Body/Emphasized */
+.services__cta {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 10px 8px;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  margin-top: 40px;
+  padding: 14px 16px;
   background: var(--color-primary);
-  border-radius: 8px;
+  border-radius: 99px;
   color: var(--color-white);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.43px;
+  transition: transform 0.15s ease;
 }
 
-.service-item--accent {
-  background: var(--color-highlight);
+.services__cta:active {
+  transform: scale(0.98);
 }
 
-/* Callout/Regular */
-.service-item__name {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: -0.31px;
-}
-
-.service-item--accent .service-item__name {
-  color: var(--color-primary);
-}
-
-/* Footnote/Regular */
-.service-item__en {
-  font-size: 13px;
-  line-height: 18px;
-  letter-spacing: -0.08px;
-}
-
-.service-item--accent .service-item__en {
-  color: var(--color-muted);
+.services__cta:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 /* ---------- Reviews ---------- */
 
 .reviews {
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 76px;
-  padding: 24px 0;
-  overflow: hidden;
+  gap: 24px;
+  min-height: 402px;
+  margin-top: 4px;
+  /* Bottom room so the floating button never covers "Lihat lebih review kami" */
+  padding: 36px 0 calc(24px + 56px + var(--float-gap));
   background: var(--color-primary);
   color: var(--color-white);
 }
 
-/* Tree sketch drawn behind the heading and reviews, pinned top-right (244×298 in the design) */
-.reviews__sketch {
-  position: absolute;
-  top: -7px;
-  right: 0;
-  width: 244px;
-  height: 298px;
-  object-fit: cover;
-  pointer-events: none;
-}
-
-/* Keep the content painted above the sketch */
-.reviews__title,
-.reviews__body {
-  position: relative;
-}
-
-.reviews__title {
-  width: 100%;
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 10px var(--gutter);
+.reviews__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 var(--page-pad);
 }
 
 .reviews__body {
@@ -546,8 +673,8 @@ ul {
 .reviews__list {
   gap: 6px;
   width: 100%;
-  padding: 0 12px;
-  scroll-padding-left: 12px;
+  padding: 0 var(--page-pad);
+  scroll-padding-left: var(--page-pad);
 }
 
 .review-shot {
@@ -562,7 +689,7 @@ ul {
 }
 
 .reviews__more {
-  margin-right: 12px;
+  margin-right: var(--page-pad);
   padding: 6px 21px;
   background: var(--color-mint);
   border-radius: 99px;
@@ -579,11 +706,6 @@ ul {
 .reviews__more:focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: 2px;
-}
-
-/* Extra room at the very end so the floating button never covers "Lihat lebih review kami" */
-.reviews {
-  padding-bottom: calc(24px + 56px + var(--float-gap));
 }
 
 /* ---------- Floating WhatsApp button ---------- */
@@ -648,37 +770,33 @@ ul {
   }
 
   .hero__content {
-    padding-top: 120px;
+    padding: 110px var(--gutter) 0;
   }
 
   .hero__intro {
-    width: 460px;
-    gap: 20px;
+    width: 420px;
   }
 
   .hero__title {
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 44px;
+    line-height: 52px;
   }
 
-  .hero__lead {
-    width: 380px;
-    font-size: 17px;
-    line-height: 24px;
+  .review-pill {
+    width: 260px;
   }
 
-  .reviews__list {
-    padding-left: max(var(--gutter), calc((100% - var(--content-max)) / 2 + var(--gutter)));
-    scroll-padding-left: max(var(--gutter), calc((100% - var(--content-max)) / 2 + var(--gutter)));
+  .services__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .services__cta {
+    max-width: 370px;
   }
 
   .gallery,
   .reviews__list {
     cursor: grab;
-  }
-
-  .reviews__more {
-    margin-right: max(12px, calc((100% - var(--content-max)) / 2 + var(--gutter)));
   }
 }
 
@@ -688,7 +806,9 @@ ul {
   }
 
   .review-pill,
-  .reviews__more {
+  .reviews__more,
+  .service-tile,
+  .services__cta {
     transition: none;
   }
 

@@ -47,11 +47,13 @@
       "name": "Servis Bomoh Pokok",
       "itemListElement": [
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tebang Pokok", "alternateName": "Tree Removal & Felling" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pangkas & Pengurusan Dahan", "alternateName": "Pruning & Crown Management" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pembuangan Tunggul Pokok", "alternateName": "Stump Service" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cantas & Pengurusan Dahan", "alternateName": "Pruning & Crown Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pembuangan Tunggul Pokok", "alternateName": "Stump Removal" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pembersihan Tanah Lot", "alternateName": "Lot Clearing" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servis Menyelamatkan Dron", "alternateName": "Drone Rescuer Service" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servis Potong Rumput", "alternateName": "Lawn Mowing Service" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servis Menyelamat Dron", "alternateName": "Drone Rescue" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servis Potong Rumput", "alternateName": "Lawn Mowing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servis Chainsaw", "alternateName": "Chainsaw Service" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sewa Crane & Skylift", "alternateName": "Crane & Skylift Rental" } }
       ]
     }
   }
@@ -59,20 +61,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=19" />
+  <link rel="stylesheet" href="styles.css?v=20" />
 </head>
 <body>
   <header class="site-header" id="top">
     <div class="site-header__inner">
       <a class="brand" href="#top">
-        <span class="brand__name">BOMOH POKOK</span>
-        <span class="brand__tagline">Servis Tebang &amp; Penjagaan Pokok Profesional</span>
+        <span class="brand__logo"><img src="assets/logo.png" width="40" height="40" alt="Logo Bomoh Pokok Tree Care" /></span>
+        <span class="brand__text">
+          <span class="brand__name">BOMOH POKOK</span>
+          <span class="brand__tagline">Servis Tebang &amp; Penjagaan Pokok Profesional</span>
+        </span>
       </a>
       <span class="menu-icon" aria-hidden="true">
-        <img src="assets/menu.svg" width="20" height="20" alt="" />
+        <img src="assets/menu.svg" width="24" height="24" alt="" />
       </span>
     </div>
   </header>
+
+  <div class="contact-bar">
+    <p>Untuk Pertanyaan, Hubungi <a href="tel:+60122760769">+6012-276 0769</a></p>
+  </div>
 
   <main>
     <!-- Hero -->
@@ -83,36 +92,35 @@
 
       <div class="hero__content">
         <div class="hero__intro">
-          <h1 class="hero__title" id="hero-title">Servis<br />Tebang Pokok<br />Profesional</h1>
+          <div class="hero__heading">
+            <h1 class="hero__title" id="hero-title">Servis<br />Tebang Pokok<br />Profesional</h1>
 
-          <a class="review-pill" href="https://maps.app.goo.gl/sbUfZrj76yN1f9YQ7" target="_blank" rel="noopener" aria-label="Penilaian Google Review 4.8 daripada 5">
-            <span class="review-pill__source">
-              <img src="assets/google.svg" width="16" height="16" alt="" />
-              <span>Google Review</span>
-            </span>
-            <span class="review-pill__rating">
-              <span class="review-pill__score" data-count-to="4.8" data-count-from="0.1">4.8</span>
-              <span class="review-pill__star"><img src="assets/star.svg" width="15.2169" height="14.4721" alt="" /></span>
-            </span>
-          </a>
+            <a class="review-pill" href="https://maps.app.goo.gl/sbUfZrj76yN1f9YQ7" target="_blank" rel="noopener" aria-label="Penilaian Google Review 4.8 daripada 5">
+              <span class="review-pill__source">
+                <img src="assets/google.svg" width="24" height="24" alt="" />
+                <span>Google Review</span>
+              </span>
+              <span class="review-pill__rating">
+                <span class="review-pill__score" data-count-to="4.8" data-count-from="0.1">4.8</span>
+                <span class="review-pill__star"><img src="assets/star.svg" width="22.82" height="21.71" alt="" /></span>
+              </span>
+            </a>
+          </div>
 
-          <p class="hero__lead">
-            Dengan lebih 12 tahun pengalaman, kami mengurus kerja tebang, pangkas,<br />
-            dan pengurusan pokok dengan selamat, kemas, dan profesional.
-          </p>
+          <p class="hero__lead">Dengan lebih 12 tahun pengalaman, kami mengurus kerja tebang, cantas, dan pengurusan pokok dengan selamat, kemas, dan profesional.</p>
         </div>
 
         <ul class="features">
           <li class="feature">
-            <img src="assets/chainsaw.svg" width="24" height="24" alt="" />
+            <span class="feature__icon"><img src="assets/chainsaw.svg" width="24" height="24" alt="" /></span>
             <span>Beroperasi<br />Seluruh Malaysia</span>
           </li>
           <li class="feature">
-            <img src="assets/helmet.svg" width="24" height="24" alt="" />
-            <span>Konsultasi<br />profesional disediakan</span>
+            <span class="feature__icon"><img src="assets/helmet.svg" width="24" height="24" alt="" /></span>
+            <span>Konsultasi<br />Profesional disediakan</span>
           </li>
           <li class="feature">
-            <img src="assets/certified.svg" width="24" height="24" alt="" />
+            <span class="feature__icon"><img src="assets/certified.svg" width="24" height="24" alt="" /></span>
             <span>Pekerja<br />terlatih &amp; berpengalaman</span>
           </li>
         </ul>
@@ -121,9 +129,12 @@
 
     <!-- Projects -->
     <section class="projects" aria-labelledby="projects-title">
-      <h2 class="projects__title section-title" id="projects-title">
-        Lebih <span class="text-highlight" data-count-to="500">500</span><br />projek kami kendalikan
-      </h2>
+      <div class="projects__intro">
+        <h2 class="section-title projects__title" id="projects-title">
+          Lebih <span class="text-accent" data-count-to="500">500</span> projek<br />dikendalikan oleh kami
+        </h2>
+        <p class="section-lead">Sejak tahun 2013</p>
+      </div>
 
       <div class="scroller gallery" data-scroller data-autoscroll tabindex="0" aria-label="Galeri projek">
         <div class="gallery__group">
@@ -390,39 +401,65 @@
     <!-- Services -->
     <section class="services" aria-labelledby="services-title">
       <div class="services__intro">
-        <h2 class="section-title services__title" id="services-title">Bukan<br />Tebang Pokok Sahaja</h2>
-        <p class="services__text">Bomoh Pokok juga menawarkan perkhidmatan profesional lain di sekitar Kuala Lumpur dan Selangor.</p>
-        <p class="services__text services__areas"><strong>Kawasan servis:</strong> Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Klang, Puchong, Cheras, Ampang, Kajang, Bangi, Seri Kembangan, Cyberjaya, Rawang, Selayang, Gombak dan seluruh Selangor.</p>
+        <h2 class="section-title" id="services-title"><span class="text-accent">Bukan</span><br />Tebang Pokok Sahaja</h2>
+        <p class="section-lead">Bomoh Pokok turut menyediakan pelbagai perkhidmatan profesional berkaitan pokok, tanah dan kerja di tempat tinggi di seluruh Semenanjung Malaysia</p>
+        <p class="services__areas"><strong>Kawasan servis:</strong> Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Klang, Puchong, Cheras, Ampang, Kajang, Bangi, Seri Kembangan, Cyberjaya, Rawang, Selayang, Gombak dan seluruh Selangor.</p>
       </div>
 
-      <ul class="services__list">
-        <li class="service-item">
-          <h3 class="service-item__name">Pangkas &amp; Pengurusan Dahan</h3>
-          <p class="service-item__en" lang="en">Pruning &amp; Crown Management</p>
+      <ul class="services__grid">
+        <li>
+          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Cantas%20%26%20Pengurusan%20Dahan." target="_blank" rel="noopener">
+            <span class="service-tile__art service-tile__art--cantas" aria-hidden="true"><img src="assets/services/cantas.png" alt="" loading="lazy" /></span>
+            <span class="service-tile__name">Cantas &amp;<br />Pengurusan Dahan</span>
+          </a>
         </li>
-        <li class="service-item">
-          <h3 class="service-item__name">Pembuangan Tunggul Pokok</h3>
-          <p class="service-item__en" lang="en">Stump Service</p>
+        <li>
+          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Pembuangan%20Tunggul%20Pokok." target="_blank" rel="noopener">
+            <span class="service-tile__art service-tile__art--tunggul" aria-hidden="true"><img src="assets/services/tunggul.png" alt="" loading="lazy" /></span>
+            <span class="service-tile__name">Pembuangan<br />Tunggul Pokok</span>
+          </a>
         </li>
-        <li class="service-item service-item--accent">
-          <h3 class="service-item__name">Pembersihan Tanah Lot</h3>
-          <p class="service-item__en" lang="en">Lot Clearing</p>
+        <li>
+          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Pembersihan%20Tanah%20Lot." target="_blank" rel="noopener">
+            <span class="service-tile__art service-tile__art--tanah" aria-hidden="true"><img src="assets/services/tanah.png" alt="" loading="lazy" /></span>
+            <span class="service-tile__name">Pembersihan<br />Tanah Lot</span>
+          </a>
         </li>
-        <li class="service-item service-item--accent">
-          <h3 class="service-item__name">Servis Menyelamatkan Dron</h3>
-          <p class="service-item__en" lang="en">Drone Rescuer Service</p>
+        <li>
+          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Servis%20Menyelamat%20Dron." target="_blank" rel="noopener">
+            <span class="service-tile__art service-tile__art--dron" aria-hidden="true"><img src="assets/services/dron.png" alt="" loading="lazy" /></span>
+            <span class="service-tile__name">Servis Menyelamat<br />Dron</span>
+          </a>
         </li>
-        <li class="service-item service-item--accent">
-          <h3 class="service-item__name">Servis Potong Rumput</h3>
-          <p class="service-item__en" lang="en">Lawn Mowing Service</p>
+        <li>
+          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Servis%20Potong%20Rumput." target="_blank" rel="noopener">
+            <span class="service-tile__art service-tile__art--rumput" aria-hidden="true"><img src="assets/services/rumput.png" alt="" loading="lazy" /></span>
+            <span class="service-tile__name">Servis Potong<br />Rumput</span>
+          </a>
+        </li>
+        <li>
+          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Servis%20Chainsaw." target="_blank" rel="noopener">
+            <span class="service-tile__art service-tile__art--chainsaw" aria-hidden="true"><img src="assets/services/chainsaw.png" alt="" loading="lazy" /></span>
+            <span class="service-tile__name">Servis<br />Chainsaw</span>
+          </a>
+        </li>
+        <li>
+          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Sewa%20Crane%20%26%20Skylift." target="_blank" rel="noopener">
+            <span class="service-tile__art service-tile__art--crane" aria-hidden="true"><img src="assets/services/crane.png" alt="" loading="lazy" /></span>
+            <span class="service-tile__name">Sewa Crane &amp;<br />Skylift</span>
+          </a>
         </li>
       </ul>
+
+      <a class="services__cta" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20untuk%20servis%20pokok." target="_blank" rel="noopener">Dapatkan Sebut Harga</a>
     </section>
 
     <!-- Reviews -->
     <section class="reviews" aria-labelledby="reviews-title">
-      <img class="reviews__sketch" src="assets/tree-sketch.png" width="244" height="298" alt="" loading="lazy" />
-      <h2 class="section-title reviews__title" id="reviews-title">Kerja Kami.<br />Kata Mereka.</h2>
+      <div class="reviews__intro">
+        <h2 class="section-title" id="reviews-title"><span class="text-accent">Kerja Kami.</span><br />Kata Mereka.</h2>
+        <p class="section-lead">Pengalaman sebenar pelanggan dengan servis pokok, pembersihan tanah, dan pelbagai perkhidmatan kami.</p>
+      </div>
 
       <div class="reviews__body">
         <div class="scroller reviews__list" data-scroller tabindex="0" aria-label="Ulasan pelanggan di Google">
@@ -435,6 +472,7 @@
 
         <a class="reviews__more" href="https://maps.app.goo.gl/sbUfZrj76yN1f9YQ7" target="_blank" rel="noopener">Lihat lebih review kami</a>
       </div>
+
     </section>
   </main>
 
@@ -444,6 +482,6 @@
     <span>Dapatkan Sebut harga</span>
   </a>
 
-  <script src="script.js?v=19"></script>
+  <script src="script.js?v=20"></script>
 </body>
 </html>
