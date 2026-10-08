@@ -540,13 +540,32 @@ ul {
 /* ---------- Reviews ---------- */
 
 .reviews {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 18px;
   padding: 24px 0;
+  overflow: hidden;
   background: var(--color-primary);
   color: var(--color-white);
+}
+
+/* Tree sketch drawn behind the heading and reviews, pinned top-right (244×298 in the design) */
+.reviews__sketch {
+  position: absolute;
+  top: -7px;
+  right: 0;
+  width: 244px;
+  height: 298px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Keep the content painted above the sketch */
+.reviews__title,
+.reviews__body {
+  position: relative;
 }
 
 .reviews__title {
