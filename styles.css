@@ -15,7 +15,6 @@
   --content-max: 1200px;
   /* Side padding that keeps content in a centred column on wide screens */
   --page-pad: max(var(--gutter), calc((100% - var(--content-max)) / 2 + var(--gutter)));
-  --float-gap: 24px;
 }
 
 *,
@@ -638,8 +637,7 @@ ul {
   gap: 24px;
   min-height: 402px;
   margin-top: 4px;
-  /* Bottom room so the floating button never covers "Lihat lebih review kami" */
-  padding: 36px 0 calc(24px + 56px + var(--float-gap));
+  padding: 36px 0;
   background: var(--color-primary);
   color: var(--color-white);
 }
@@ -694,59 +692,6 @@ ul {
 .reviews__more:focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: 2px;
-}
-
-/* ---------- Floating WhatsApp button ---------- */
-
-.floating-cta {
-  position: fixed;
-  right: var(--gutter);
-  bottom: calc(var(--float-gap) + env(safe-area-inset-bottom, 0px));
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  min-width: 232px;
-  height: 56px;
-  padding: 0 16px;
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: 99px;
-  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
-  color: var(--color-black);
-  /* Body/Regular */
-  font-size: 17px;
-  line-height: 22px;
-  letter-spacing: -0.43px;
-  white-space: nowrap;
-  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.15s ease, visibility 0.3s;
-}
-
-/* Hidden while the hero is on screen (script.js toggles this) */
-.floating-cta.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(16px);
-  pointer-events: none;
-}
-
-.floating-cta img {
-  flex-shrink: 0;
-}
-
-.floating-cta:hover {
-  transform: translateY(-2px);
-  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.25));
-}
-
-.floating-cta:active {
-  transform: translateY(1px);
-  filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.25));
-}
-
-.floating-cta:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 3px;
 }
 
 /* ---------- Larger screens ---------- */
@@ -807,12 +752,7 @@ ul {
     transition: none;
   }
 
-  .feature,
-  .floating-cta {
+  .feature {
     animation: none;
-  }
-
-  .floating-cta {
-    transition: none;
   }
 }

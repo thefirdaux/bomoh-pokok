@@ -101,20 +101,6 @@
     requestAnimationFrame(step);
   });
 
-  // Floating WhatsApp button only shows once the visitor has scrolled past the hero
-  var floatingCta = document.querySelector(".floating-cta");
-  var hero = document.querySelector(".hero");
-
-  if (floatingCta && hero && "IntersectionObserver" in window) {
-    floatingCta.classList.add("is-hidden");
-
-    new IntersectionObserver(function (entries) {
-      var entry = entries[0];
-      var pastHero = !entry.isIntersecting && entry.boundingClientRect.top < 0;
-      floatingCta.classList.toggle("is-hidden", !pastHero);
-    }, { rootMargin: "-68px 0px 0px 0px" }).observe(hero); // 68px = sticky header
-  }
-
   // Gallery photos past the first few blocks carry data-src and load only as they
   // approach the visible part of the gallery (native lazy loading fetches far too early)
   document.querySelectorAll(".gallery").forEach(function (gallery) {
