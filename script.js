@@ -101,6 +101,21 @@
     requestAnimationFrame(step);
   });
 
+  // Service picker: the chosen card goes into the "Dapatkan Sebut Harga" WhatsApp message.
+  // With nothing chosen, the button keeps its general enquiry link from the HTML.
+  var quoteCta = document.querySelector("[data-quote-cta]");
+
+  if (quoteCta) {
+    var generalHref = quoteCta.href;
+
+    document.querySelectorAll('input[name="service"]').forEach(function (choice) {
+      choice.addEventListener("change", function () {
+        var message = "Hai Bomoh Pokok, saya ingin mendapatkan sebut harga percuma untuk " + choice.value + ".";
+        quoteCta.href = generalHref.split("?")[0] + "?text=" + encodeURIComponent(message);
+      });
+    });
+  }
+
   // Gallery photos past the first few blocks carry data-src and load only as they
   // approach the visible part of the gallery (native lazy loading fetches far too early)
   document.querySelectorAll(".gallery").forEach(function (gallery) {

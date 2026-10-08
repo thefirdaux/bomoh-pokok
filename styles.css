@@ -509,6 +509,14 @@ ul {
 }
 
 /* 177×177 white card; the name sits 46px from the top */
+.services__picker {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* 177×177 white card; the name sits 46px from the top. Tapping selects it (one at a time). */
 .service-tile {
   position: relative;
   display: block;
@@ -516,16 +524,30 @@ ul {
   padding: 46px 10px 24px;
   background: var(--color-white);
   border-radius: 16px;
-  transition: transform 0.15s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .service-tile:active {
   transform: scale(0.98);
 }
 
-.service-tile:focus-visible {
+/* The radio itself is invisible; the whole card is its label */
+.service-tile__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Selected card: green outline */
+.service-tile:has(.service-tile__input:checked) {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.service-tile:has(.service-tile__input:focus-visible) {
   outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+  outline-offset: 4px;
 }
 
 /* Body/Emphasized */

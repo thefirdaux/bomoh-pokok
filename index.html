@@ -61,7 +61,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=25" />
+  <link rel="stylesheet" href="styles.css?v=26" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -405,52 +405,62 @@
         <p class="section-lead">Bomoh Pokok turut menyediakan pelbagai perkhidmatan profesional berkaitan pokok, tanah dan kerja di tempat tinggi di seluruh Semenanjung Malaysia</p>
       </div>
 
-      <ul class="services__grid">
-        <li>
-          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Cantas%20%26%20Pengurusan%20Dahan." target="_blank" rel="noopener">
-            <span class="service-tile__art service-tile__art--cantas" aria-hidden="true"><img src="assets/services/cantas.png" alt="" loading="lazy" /></span>
-            <span class="service-tile__name">Cantas &amp;<br />Pengurusan Dahan</span>
-          </a>
-        </li>
-        <li>
-          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Pembuangan%20Tunggul%20Pokok." target="_blank" rel="noopener">
-            <span class="service-tile__art service-tile__art--tunggul" aria-hidden="true"><img src="assets/services/tunggul.png" alt="" loading="lazy" /></span>
-            <span class="service-tile__name">Pembuangan<br />Tunggul Pokok</span>
-          </a>
-        </li>
-        <li>
-          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Pembersihan%20Tanah%20Lot." target="_blank" rel="noopener">
-            <span class="service-tile__art service-tile__art--tanah" aria-hidden="true"><img src="assets/services/tanah.png" alt="" loading="lazy" /></span>
-            <span class="service-tile__name">Pembersihan<br />Tanah Lot</span>
-          </a>
-        </li>
-        <li>
-          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Servis%20Menyelamat%20Dron." target="_blank" rel="noopener">
-            <span class="service-tile__art service-tile__art--dron" aria-hidden="true"><img src="assets/services/dron.png" alt="" loading="lazy" /></span>
-            <span class="service-tile__name">Servis Menyelamat<br />Dron</span>
-          </a>
-        </li>
-        <li>
-          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Servis%20Potong%20Rumput." target="_blank" rel="noopener">
-            <span class="service-tile__art service-tile__art--rumput" aria-hidden="true"><img src="assets/services/rumput.png" alt="" loading="lazy" /></span>
-            <span class="service-tile__name">Servis Potong<br />Rumput</span>
-          </a>
-        </li>
-        <li>
-          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Servis%20Chainsaw." target="_blank" rel="noopener">
-            <span class="service-tile__art service-tile__art--chainsaw" aria-hidden="true"><img src="assets/services/chainsaw.png" alt="" loading="lazy" /></span>
-            <span class="service-tile__name">Servis<br />Chainsaw</span>
-          </a>
-        </li>
-        <li>
-          <a class="service-tile" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20Sewa%20Crane%20%26%20Skylift." target="_blank" rel="noopener">
-            <span class="service-tile__art service-tile__art--crane" aria-hidden="true"><img src="assets/services/crane.png" alt="" loading="lazy" /></span>
-            <span class="service-tile__name">Sewa Crane &amp;<br />Skylift</span>
-          </a>
-        </li>
-      </ul>
+      <fieldset class="services__picker">
+        <legend class="visually-hidden">Pilih servis</legend>
+        <ul class="services__grid">
+          <li>
+            <label class="service-tile">
+              <input class="service-tile__input" type="radio" name="service" value="Cantas &amp; Pengurusan Dahan" />
+              <span class="service-tile__art service-tile__art--cantas" aria-hidden="true"><img src="assets/services/cantas.png" alt="" loading="lazy" /></span>
+              <span class="service-tile__name">Cantas &amp;<br />Pengurusan Dahan</span>
+            </label>
+          </li>
+          <li>
+            <label class="service-tile">
+              <input class="service-tile__input" type="radio" name="service" value="Pembuangan Tunggul Pokok" />
+              <span class="service-tile__art service-tile__art--tunggul" aria-hidden="true"><img src="assets/services/tunggul.png" alt="" loading="lazy" /></span>
+              <span class="service-tile__name">Pembuangan<br />Tunggul Pokok</span>
+            </label>
+          </li>
+          <li>
+            <label class="service-tile">
+              <input class="service-tile__input" type="radio" name="service" value="Pembersihan Tanah Lot" />
+              <span class="service-tile__art service-tile__art--tanah" aria-hidden="true"><img src="assets/services/tanah.png" alt="" loading="lazy" /></span>
+              <span class="service-tile__name">Pembersihan<br />Tanah Lot</span>
+            </label>
+          </li>
+          <li>
+            <label class="service-tile">
+              <input class="service-tile__input" type="radio" name="service" value="Servis Menyelamat Dron" />
+              <span class="service-tile__art service-tile__art--dron" aria-hidden="true"><img src="assets/services/dron.png" alt="" loading="lazy" /></span>
+              <span class="service-tile__name">Servis Menyelamat<br />Dron</span>
+            </label>
+          </li>
+          <li>
+            <label class="service-tile">
+              <input class="service-tile__input" type="radio" name="service" value="Servis Potong Rumput" />
+              <span class="service-tile__art service-tile__art--rumput" aria-hidden="true"><img src="assets/services/rumput.png" alt="" loading="lazy" /></span>
+              <span class="service-tile__name">Servis Potong<br />Rumput</span>
+            </label>
+          </li>
+          <li>
+            <label class="service-tile">
+              <input class="service-tile__input" type="radio" name="service" value="Servis Chainsaw" />
+              <span class="service-tile__art service-tile__art--chainsaw" aria-hidden="true"><img src="assets/services/chainsaw.png" alt="" loading="lazy" /></span>
+              <span class="service-tile__name">Servis<br />Chainsaw</span>
+            </label>
+          </li>
+          <li>
+            <label class="service-tile">
+              <input class="service-tile__input" type="radio" name="service" value="Sewa Crane &amp; Skylift" />
+              <span class="service-tile__art service-tile__art--crane" aria-hidden="true"><img src="assets/services/crane.png" alt="" loading="lazy" /></span>
+              <span class="service-tile__name">Sewa Crane &amp;<br />Skylift</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
 
-      <a class="services__cta" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20untuk%20servis%20pokok." target="_blank" rel="noopener">Dapatkan Sebut Harga</a>
+      <a class="services__cta" data-quote-cta href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20untuk%20servis%20pokok." target="_blank" rel="noopener">Dapatkan Sebut Harga</a>
     </section>
 
     <!-- Reviews -->
@@ -462,6 +472,6 @@
     </section>
   </main>
 
-  <script src="script.js?v=25"></script>
+  <script src="script.js?v=26"></script>
 </body>
 </html>
