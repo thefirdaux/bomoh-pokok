@@ -225,27 +225,6 @@
     observer.observe(counter);
   });
 
-  // Service cards appear one by one the first time their row scrolls into view
-  document.querySelectorAll("[data-stagger]").forEach(function (group) {
-    if (reduceMotion || !("IntersectionObserver" in window)) return;
-
-    Array.prototype.forEach.call(group.children, function (item, index) {
-      item.style.setProperty("--i", index);
-    });
-    group.classList.add("is-pending");
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        if (!entries[0].isIntersecting) return;
-        observer.disconnect();
-        group.classList.remove("is-pending");
-        group.classList.add("is-in");
-      },
-      { threshold: 0.25 }
-    );
-    observer.observe(group);
-  });
-
   // Carousels already swipe on touch; let mouse users drag them too
   var finePointer = window.matchMedia("(pointer: fine)").matches;
 

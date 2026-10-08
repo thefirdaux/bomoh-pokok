@@ -351,7 +351,7 @@ ul {
   animation-delay: 0.9s;
 }
 
-/* Shared by the hero pills and the service cards */
+/* Shared by the hero pills and the floating button */
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -526,17 +526,6 @@ ul {
 .service-card__btn:focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: 2px;
-}
-
-/* Cards appear one by one when the row scrolls into view.
-   The script adds .is-pending (hidden) and later .is-in, and sets --i per card. */
-[data-stagger].is-pending > * {
-  opacity: 0;
-}
-
-[data-stagger].is-in > * {
-  animation: rise-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: calc(var(--i, 0) * 0.2s);
 }
 
 /* ---------- Reviews ---------- */
