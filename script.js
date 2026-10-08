@@ -1,26 +1,7 @@
 (function () {
   "use strict";
 
-  // Business WhatsApp number: country code + number, digits only
-  var WHATSAPP_NUMBER = "60122760769";
-
-  // Google Maps listing with the business's reviews
-  var GOOGLE_REVIEW_URL = "https://maps.app.goo.gl/sbUfZrj76yN1f9YQ7";
-
-  function whatsappUrl(service) {
-    var message = service
-      ? "Hai Bomoh Pokok, saya ingin mendapatkan sebut harga percuma untuk servis " + service + "."
-      : "Hai Bomoh Pokok, saya ingin mendapatkan sebut harga untuk servis pokok.";
-    return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
-  }
-
-  document.querySelectorAll("[data-whatsapp-link]").forEach(function (link) {
-    link.href = whatsappUrl(link.getAttribute("data-service"));
-  });
-
-  document.querySelectorAll("[data-review-link]").forEach(function (link) {
-    link.href = GOOGLE_REVIEW_URL;
-  });
+  // WhatsApp (wa.me/60122760769) and Google review links are written directly in index.html
 
   // Project gallery drifts sideways on a seamless loop; pauses while the user is touching it
   var GALLERY_SPEED = 80; // pixels per second
