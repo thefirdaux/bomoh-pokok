@@ -23,7 +23,7 @@
   });
 
   // Project gallery drifts sideways on a seamless loop; pauses while the user is touching it
-  var GALLERY_SPEED = 40; // pixels per second
+  var GALLERY_SPEED = 80; // pixels per second
   var RESUME_DELAY = 2500; // ms after the user lets go
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
