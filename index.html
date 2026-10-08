@@ -46,11 +46,12 @@
       "@type": "OfferCatalog",
       "name": "Servis Bomoh Pokok",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Removal & Felling", "description": "Penebangan pokok secara profesional dan terkawal untuk pokok berisiko, rosak atau mengganggu ruang, termasuk kerja pemotongan dan pembersihan kawasan selepas selesai." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pruning & Crown Management", "description": "Pemangkasan dahan secara terancang untuk mengekalkan bentuk, kesihatan dan keseimbangan pokok serta mengurangkan risiko dahan berlebihan atau berbahaya." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stump Service", "description": "Membuang tunggul pokok yang masih berbaki selepas penebangan bagi memastikan kawasan lebih kemas, selamat dan mudah digunakan semula." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lot Clearing", "description": "Membersihkan kawasan tanah daripada semak samun, pokok, tunggul dan tumbuhan liar untuk menyediakan ruang yang lebih bersih, lapang dan sedia digunakan." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drone Rescuer", "description": "Servis menyelamatkan dron yang tersangkut di tempat tinggi seperti pokok dengan teknik dan peralatan yang sesuai." } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tebang Pokok", "alternateName": "Tree Removal & Felling" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pangkas & Pengurusan Dahan", "alternateName": "Pruning & Crown Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pembuangan Tunggul Pokok", "alternateName": "Stump Service" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pembersihan Tanah Lot", "alternateName": "Lot Clearing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servis Menyelamatkan Dron", "alternateName": "Drone Rescuer Service" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servis Potong Rumput", "alternateName": "Lawn Mowing Service" } }
       ]
     }
   }
@@ -58,7 +59,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=18" />
+  <link rel="stylesheet" href="styles.css?v=19" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -394,67 +395,28 @@
         <p class="services__text services__areas"><strong>Kawasan servis:</strong> Kuala Lumpur, Petaling Jaya, Shah Alam, Subang Jaya, Klang, Puchong, Cheras, Ampang, Kajang, Bangi, Seri Kembangan, Cyberjaya, Rawang, Selayang, Gombak dan seluruh Selangor.</p>
       </div>
 
-      <div class="scroller services__list" data-scroller tabindex="0" aria-label="Senarai servis">
-        <article class="service-card">
-          <div class="service-card__top">
-            <div class="service-card__head">
-              <p class="service-card__label">Servis 1</p>
-              <h3 class="service-card__title">Tree Removal &amp; Felling</h3>
-            </div>
-            <img class="service-card__img" src="assets/service-removal.jpg" alt="Pasukan Bomoh Pokok menebang pokok dan memotong dahan di kawasan rumah" loading="lazy" />
-          </div>
-          <p class="service-card__text">Penebangan pokok secara profesional dan terkawal untuk pokok berisiko, rosak atau mengganggu ruang, termasuk kerja pemotongan dan pembersihan kawasan selepas selesai</p>
-          <a class="service-card__btn" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20servis%20Tree%20Removal%20%26%20Felling." target="_blank" rel="noopener">Get Free Quote</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-card__top">
-            <div class="service-card__head">
-              <p class="service-card__label">Servis 2</p>
-              <h3 class="service-card__title">Pruning &amp; Crown Management</h3>
-            </div>
-            <img class="service-card__img" src="assets/service-pruning.jpg" alt="Deretan pokok di tepi jalan selepas kerja pemangkasan dahan" loading="lazy" />
-          </div>
-          <p class="service-card__text">Pemangkasan dahan secara terancang untuk mengekalkan bentuk, kesihatan &amp; keseimbangan pokok serta mengurangkan risiko dahan berlebihan atau berbahaya</p>
-          <a class="service-card__btn" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20servis%20Pruning%20%26%20Crown%20Management." target="_blank" rel="noopener">Get Free Quote</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-card__top">
-            <div class="service-card__head">
-              <p class="service-card__label">Servis 3</p>
-              <h3 class="service-card__title">Stump<br />Service</h3>
-            </div>
-            <img class="service-card__img" src="assets/service-removal.jpg" alt="Kerja penebangan pokok dan pembersihan kawasan oleh Bomoh Pokok" loading="lazy" />
-          </div>
-          <p class="service-card__text">Membuang tunggul pokok yang masih berbaki selepas penebangan bagi memastikan kawasan lebih kemas, selamat dan mudah digunakan semula.</p>
-          <a class="service-card__btn" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20servis%20Stump%20Service." target="_blank" rel="noopener">Get Free Quote</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-card__top">
-            <div class="service-card__head">
-              <p class="service-card__label">Servis 4</p>
-              <h3 class="service-card__title">Lot<br />Clearing</h3>
-            </div>
-            <img class="service-card__img" src="assets/service-lot-clearing.jpg" alt="Kawasan tanah yang dibersihkan daripada semak, pokok dan tunggul" loading="lazy" />
-          </div>
-          <p class="service-card__text">Membersihkan kawasan tanah daripada semak samun, pokok, tunggul dan tumbuhan liar untuk menyediakan ruang yang lebih bersih, lapang dan sedia digunakan.</p>
-          <a class="service-card__btn" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20servis%20Lot%20Clearing." target="_blank" rel="noopener">Get Free Quote</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-card__top">
-            <div class="service-card__head">
-              <p class="service-card__label">Servis 5</p>
-              <h3 class="service-card__title">Drone<br />Rescuer</h3>
-            </div>
-            <img class="service-card__img" src="assets/service-drone.jpg" alt="Pekerja Bomoh Pokok memanjat pokok untuk menurunkan dron yang tersangkut" loading="lazy" />
-          </div>
-          <p class="service-card__text">Servis menyelamatkan dron yang tersangkut di tempat tinggi seperti pokok, dengan teknik dan peralatan yang sesuai bagi memastikan dron dapat diturunkan dengan selamat.</p>
-          <a class="service-card__btn" href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20percuma%20untuk%20servis%20Drone%20Rescuer." target="_blank" rel="noopener">Get Free Quote</a>
-        </article>
-      </div>
+      <ul class="services__list">
+        <li class="service-item">
+          <h3 class="service-item__name">Pangkas &amp; Pengurusan Dahan</h3>
+          <p class="service-item__en" lang="en">Pruning &amp; Crown Management</p>
+        </li>
+        <li class="service-item">
+          <h3 class="service-item__name">Pembuangan Tunggul Pokok</h3>
+          <p class="service-item__en" lang="en">Stump Service</p>
+        </li>
+        <li class="service-item service-item--accent">
+          <h3 class="service-item__name">Pembersihan Tanah Lot</h3>
+          <p class="service-item__en" lang="en">Lot Clearing</p>
+        </li>
+        <li class="service-item service-item--accent">
+          <h3 class="service-item__name">Servis Menyelamatkan Dron</h3>
+          <p class="service-item__en" lang="en">Drone Rescuer Service</p>
+        </li>
+        <li class="service-item service-item--accent">
+          <h3 class="service-item__name">Servis Potong Rumput</h3>
+          <p class="service-item__en" lang="en">Lawn Mowing Service</p>
+        </li>
+      </ul>
     </section>
 
     <!-- Reviews -->
@@ -482,6 +444,6 @@
     <span>Dapatkan Sebut harga</span>
   </a>
 
-  <script src="script.js?v=18"></script>
+  <script src="script.js?v=19"></script>
 </body>
 </html>
