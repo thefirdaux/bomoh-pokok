@@ -11,6 +11,7 @@
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   --header-height: 68px;
+  --contact-height: 56px;
   --gutter: 16px;
   --content-max: 1200px;
   /* Side padding that keeps content in a centred column on wide screens */
@@ -26,6 +27,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* Keep in-page links clear of the pinned header + contact bar */
+  scroll-padding-top: calc(var(--header-height) + var(--contact-height));
 }
 
 body {
@@ -238,19 +241,26 @@ ul {
 }
 
 /* Contact strip under the header (Subheadline/Regular) */
+/* Pinned directly under the sticky header */
 .contact-bar {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 19;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
+  min-height: var(--contact-height);
   padding: 10px var(--gutter);
   font-size: 15px;
   line-height: 20px;
   letter-spacing: -0.23px;
   text-align: center;
+  background: var(--color-mint);
 }
 
+/* Phone number in Subheadline/Emphasized */
 .contact-bar a {
+  font-weight: 600;
   white-space: nowrap;
 }
 
