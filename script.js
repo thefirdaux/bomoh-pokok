@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  // TODO: replace with the business WhatsApp number (country code, digits only, e.g. "60123456789").
-  var WHATSAPP_NUMBER = "60123456789";
+  // Business WhatsApp number: country code + number, digits only
+  var WHATSAPP_NUMBER = "60122760769";
 
   // TODO: replace with the Google Business Profile reviews link.
   var GOOGLE_REVIEW_URL = "https://www.google.com/search?q=Bomoh+Pokok+reviews";
