@@ -8,6 +8,7 @@
   --color-pill-border: #f5f5f5;
   --color-mint: #e8f1e9;
   --color-inactive: #787474;
+  --color-contact: #d9d9d9;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
@@ -262,7 +263,7 @@ main {
   line-height: 20px;
   letter-spacing: -0.23px;
   text-align: center;
-  background: var(--color-mint);
+  background: var(--color-contact);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: background-color 0.15s ease;
@@ -270,7 +271,7 @@ main {
 
 /* Brief darker flash when tapped */
 .contact-bar:active {
-  background: #d3e3d6;
+  background: #c6c6c6;
 }
 
 .contact-bar:focus-visible {
