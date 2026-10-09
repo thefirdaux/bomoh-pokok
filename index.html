@@ -34,6 +34,16 @@
     "@type": "LocalBusiness",
     "@id": "https://thefirdaux.github.io/bomoh-pokok/#business",
     "name": "Bomoh Pokok",
+    "legalName": "MSF TEGUH SERVICES",
+    "telephone": "+60122760769",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "No.27, Jalan Setia Indah U13/12, Setia Alam",
+      "addressLocality": "Shah Alam",
+      "postalCode": "40170",
+      "addressRegion": "Selangor",
+      "addressCountry": "MY"
+    },
     "description": "Servis tebang dan penjagaan pokok profesional dengan lebih 12 tahun pengalaman dan lebih 1000 projek. Pekerja terlatih dan berpengalaman, konsultasi profesional disediakan.",
     "url": "https://thefirdaux.github.io/bomoh-pokok/",
     "image": "https://thefirdaux.github.io/bomoh-pokok/assets/share.jpg",
@@ -61,7 +71,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=27" />
+  <link rel="stylesheet" href="styles.css?v=28" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -112,15 +122,15 @@
 
         <ul class="features">
           <li class="feature">
-            <span class="feature__icon"><img src="assets/chainsaw.svg" width="24" height="24" alt="" /></span>
-            <span>Beroperasi<br />Seluruh Malaysia</span>
+            <span class="feature__icon feature__icon--map"><img src="assets/feature-semenanjung.png" alt="" /></span>
+            <span>Beroperasi Seluruh<br />Semenanjung Malaysia</span>
           </li>
           <li class="feature">
-            <span class="feature__icon"><img src="assets/helmet.svg" width="24" height="24" alt="" /></span>
+            <span class="feature__icon"><img src="assets/feature-consultation.svg" width="40" height="40" alt="" /></span>
             <span>Konsultasi<br />Profesional disediakan</span>
           </li>
           <li class="feature">
-            <span class="feature__icon"><img src="assets/certified.svg" width="24" height="24" alt="" /></span>
+            <span class="feature__icon"><img src="assets/feature-certified.svg" width="40" height="40" alt="" /></span>
             <span>Pekerja<br />terlatih &amp; berpengalaman</span>
           </li>
         </ul>
@@ -413,6 +423,7 @@
               <input class="service-tile__input" type="radio" name="service" value="Cantas &amp; Pengurusan Dahan" />
               <span class="service-tile__art service-tile__art--cantas" aria-hidden="true"><img src="assets/services/cantas.png" alt="" loading="lazy" /></span>
               <span class="service-tile__name">Cantas &amp;<br />Pengurusan Dahan</span>
+              <span class="service-tile__desc">Mencantas dahan untuk mengawal pertumbuhan pokok, menjaga kesihatan dan memastikan keselamatan persekitaran.</span>
             </label>
           </li>
           <li>
@@ -420,6 +431,7 @@
               <input class="service-tile__input" type="radio" name="service" value="Pembuangan Tunggul Pokok" />
               <span class="service-tile__art service-tile__art--tunggul" aria-hidden="true"><img src="assets/services/tunggul.png" alt="" loading="lazy" /></span>
               <span class="service-tile__name">Pembuangan<br />Tunggul Pokok</span>
+              <span class="service-tile__desc">Menghapuskan tunggul pokok hingga ke akar bagi memastikan kawasan lebih bersih, kemas dan selamat.</span>
             </label>
           </li>
           <li>
@@ -427,6 +439,7 @@
               <input class="service-tile__input" type="radio" name="service" value="Pembersihan Tanah Lot" />
               <span class="service-tile__art service-tile__art--tanah" aria-hidden="true"><img src="assets/services/tanah.png" alt="" loading="lazy" /></span>
               <span class="service-tile__name">Pembersihan<br />Tanah Lot</span>
+              <span class="service-tile__desc">Membersihkan kawasan tanah daripada semak samun, rumput dan pokok bagi menyediakan ruang yang lebih bersih dan teratur.</span>
             </label>
           </li>
           <li>
@@ -434,6 +447,7 @@
               <input class="service-tile__input" type="radio" name="service" value="Servis Menyelamat Dron" />
               <span class="service-tile__art service-tile__art--dron" aria-hidden="true"><img src="assets/services/dron.png" alt="" loading="lazy" /></span>
               <span class="service-tile__name">Servis Menyelamat<br />Dron</span>
+              <span class="service-tile__desc">Menyelamatkan dron yang tersangkut di pokok atau lokasi tinggi dengan kaedah yang sesuai dan selamat.</span>
             </label>
           </li>
           <li>
@@ -441,13 +455,20 @@
               <input class="service-tile__input" type="radio" name="service" value="Servis Potong Rumput" />
               <span class="service-tile__art service-tile__art--rumput" aria-hidden="true"><img src="assets/services/rumput.png" alt="" loading="lazy" /></span>
               <span class="service-tile__name">Servis Potong<br />Rumput</span>
+              <span class="service-tile__desc">Memotong rumput dan membersihkan kawasan untuk persekitaran yang lebih kemas dan terjaga.</span>
             </label>
           </li>
           <li>
-            <label class="service-tile">
+            <label class="service-tile service-tile--brands">
               <input class="service-tile__input" type="radio" name="service" value="Servis Chainsaw" />
               <span class="service-tile__art service-tile__art--chainsaw" aria-hidden="true"><img src="assets/services/chainsaw.png" alt="" loading="lazy" /></span>
               <span class="service-tile__name">Servis<br />Chainsaw</span>
+              <span class="service-tile__brands">
+                <img src="assets/brands/echo.png" width="52" height="10.89" alt="ECHO" />
+                <img src="assets/brands/stihl.png" width="52" height="12.23" alt="STIHL" />
+                <img src="assets/brands/husqvarna.png" width="12.04" height="12.23" alt="Husqvarna" />
+              </span>
+              <span class="service-tile__desc">Membaiki dan menyelenggara chainsaw bagi memastikan prestasi mesin kekal optimum.</span>
             </label>
           </li>
           <li>
@@ -455,11 +476,13 @@
               <input class="service-tile__input" type="radio" name="service" value="Sewa Crane &amp; Skylift" />
               <span class="service-tile__art service-tile__art--crane" aria-hidden="true"><img src="assets/services/crane.png" alt="" loading="lazy" /></span>
               <span class="service-tile__name">Sewa Crane &amp;<br />Skylift</span>
+              <span class="service-tile__desc">Menyediakan sewaan crane dan skylift untuk kerja mengangkat beban serta akses ke kawasan tinggi.</span>
             </label>
           </li>
         </ul>
       </fieldset>
 
+      <p class="services__hint">Pilih salah satu jenis servis untuk mendapatkan sebut harga percuma.</p>
       <a class="services__cta" data-quote-cta href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20untuk%20servis%20pokok." target="_blank" rel="noopener">Dapatkan Sebut Harga</a>
     </section>
 
@@ -469,9 +492,116 @@
         <h2 class="section-title" id="reviews-title"><span class="text-accent">Kerja Kami.</span><br />Kata Mereka.</h2>
         <p class="section-lead">Pengalaman sebenar pelanggan dengan servis pokok, pembersihan tanah, dan pelbagai perkhidmatan kami.</p>
       </div>
+
+      <div class="scroller reviews__list" data-scroller tabindex="0" aria-label="Ulasan pelanggan di Google">
+        <article class="review-card review-card--sm">
+          <div class="review-card__head">
+            <span class="review-card__author">
+              <img class="review-card__avatar" src="assets/reviewers/avatar-1.png" width="20" height="20" alt="" />
+              <span class="review-card__name">JULIE LOW</span>
+            </span>
+            <span class="review-card__rating" aria-label="Penilaian 5.0 daripada 5">
+              <img src="assets/review-star.svg" width="16" height="16" alt="" />
+              <span aria-hidden="true">5.0</span>
+            </span>
+          </div>
+          <p class="review-card__text">Encik Shah’s worker very professional in cutting <strong>big and tall</strong> trees behind my house. Highly Recommended</p>
+        </article>
+        <article class="review-card review-card--md">
+          <div class="review-card__head">
+            <span class="review-card__author">
+              <img class="review-card__avatar" src="assets/reviewers/avatar-2.png" width="20" height="20" alt="" />
+              <span class="review-card__name">Azalia Azmi</span>
+            </span>
+            <span class="review-card__rating" aria-label="Penilaian 5.0 daripada 5">
+              <img src="assets/review-star.svg" width="16" height="16" alt="" />
+              <span aria-hidden="true">5.0</span>
+            </span>
+          </div>
+          <p class="review-card__text">Berbaloi dengan service pemotongan pokok &amp; kerja pembersihan pokok2 dgn En Shah. Senang berurusan sebab straight forward dan tak ada hidden charge. Service pon cepat &amp; bersih je. Highly recommended.</p>
+        </article>
+        <article class="review-card review-card--sm">
+          <div class="review-card__head">
+            <span class="review-card__author">
+              <img class="review-card__avatar" src="assets/reviewers/avatar-3.png" width="20" height="20" alt="" />
+              <span class="review-card__name">Nur Ashikin</span>
+            </span>
+            <span class="review-card__rating" aria-label="Penilaian 5.0 daripada 5">
+              <img src="assets/review-star.svg" width="16" height="16" alt="" />
+              <span aria-hidden="true">5.0</span>
+            </span>
+          </div>
+          <p class="review-card__text">Good service, and totally worth it! Definitely recommend to others.</p>
+          <div class="review-card__tags">
+            <p class="review-card__tags-title">Positive</p>
+            <p>Responsiveness, Punctuality, Professionalism, Value</p>
+          </div>
+        </article>
+        <article class="review-card review-card--lg">
+          <div class="review-card__head">
+            <span class="review-card__author">
+              <img class="review-card__avatar" src="assets/reviewers/avatar-4.png" width="20" height="20" alt="" />
+              <span class="review-card__name">Wai Yee Chong</span>
+            </span>
+            <span class="review-card__rating" aria-label="Penilaian 5.0 daripada 5">
+              <img src="assets/review-star.svg" width="16" height="16" alt="" />
+              <span aria-hidden="true">5.0</span>
+            </span>
+          </div>
+          <p class="review-card__text">Very good service, definitely recommended for thise who need the service.</p>
+          <div class="review-card__tags">
+            <p class="review-card__tags-title">Positive</p>
+            <p>Responsiveness, Punctuality, Quality, Professionalism, Value</p>
+          </div>
+        </article>
+        <article class="review-card review-card--xl">
+          <div class="review-card__head">
+            <span class="review-card__author">
+              <img class="review-card__avatar" src="assets/reviewers/avatar-5.png" width="20" height="20" alt="" />
+              <span class="review-card__name">Ahmad Ridzuan</span>
+            </span>
+            <span class="review-card__rating" aria-label="Penilaian 5.0 daripada 5">
+              <img src="assets/review-star.svg" width="16" height="16" alt="" />
+              <span aria-hidden="true">5.0</span>
+            </span>
+          </div>
+          <p class="review-card__text">Alhamdulillah, sekian lama cari servis tebang pokok kelapa akhirnya jumpa yang terbaik setakat ini. Hanya berurusan secara WhatsApp memandangkan kekangan kerja, tetapi team tetap menjalankan tugas dengan jayanya. Progress kerja dilaporkan dari mula higga akhir. Terima kasih banyak En Shah. Semoga bertambah rezeki pada masa akan datang...Amin.</p>
+        </article>
+      </div>
     </section>
   </main>
 
-  <script src="script.js?v=27"></script>
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <nav class="site-footer__nav" aria-label="Pautan laman">
+        <ul>
+          <li><a href="#top">Main</a></li>
+          <li><a href="#projects-title">Our Project</a></li>
+          <li><a href="#services-title">Our Service</a></li>
+          <li><a href="#reviews-title">Customer Feedback</a></li>
+          <li><a href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20untuk%20servis%20pokok." target="_blank" rel="noopener">Get Free Quote</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__social">
+        <p class="site-footer__label">Our Social Media</p>
+        <a class="social-pill" href="https://www.tiktok.com/search?q=Bomoh%20Pokok" target="_blank" rel="noopener" aria-label="Bomoh Pokok di TikTok">
+          <img src="assets/tiktok.svg" width="17.78" height="17.78" alt="" />
+          <span>Bomoh Pokok</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="site-footer__company">
+      <img src="assets/logo.png" width="40" height="40" alt="Logo Bomoh Pokok Tree Care" loading="lazy" />
+      <div class="site-footer__company-text">
+        <p class="site-footer__company-name">MSF TEGUH SERVICES</p>
+        <p class="site-footer__small">201503243508 (SA0351133-U)</p>
+      </div>
+      <address class="site-footer__small site-footer__address">No.27, Jalan Setia Indah U13/12,<br />Setia Alam, 40170 Shah Alam,<br />Selangor Darul Ehsan</address>
+      <a class="site-footer__small" href="tel:+60122760769">+6012-276 0769</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=28"></script>
 </body>
 </html>

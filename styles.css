@@ -392,7 +392,7 @@ ul {
   align-items: center;
   gap: 8px;
   padding: 10px 0;
-  border-bottom: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-primary);
   font-size: 15px;
   line-height: 20px;
   letter-spacing: -0.23px;
@@ -418,13 +418,19 @@ ul {
 }
 
 .feature__icon {
-  display: grid;
-  place-items: center;
+  position: relative;
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-  background: var(--color-primary);
-  border-radius: 8px;
+}
+
+/* Peninsular Malaysia map: 30px wide, centred, top-aligned (as in the design) */
+.feature__icon--map img {
+  position: absolute;
+  top: 0;
+  left: 12.5%;
+  width: 75%;
+  height: auto;
 }
 
 /* ---------- Projects ---------- */
@@ -492,7 +498,7 @@ ul {
 
 .services {
   margin-top: 4px;
-  padding: 24px var(--page-pad) 18px;
+  padding: 24px var(--page-pad) 30px;
 }
 
 .services__intro {
@@ -519,9 +525,11 @@ ul {
 /* 177×177 white card; the name sits 46px from the top. Tapping selects it (one at a time). */
 .service-tile {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   aspect-ratio: 1;
-  padding: 46px 10px 24px;
+  padding: 32px 10px 24px;
   background: var(--color-white);
   border-radius: 16px;
   cursor: pointer;
@@ -559,6 +567,25 @@ ul {
   letter-spacing: -0.43px;
 }
 
+/* The Chainsaw card has an extra row of brand logos, so it starts higher */
+.service-tile--brands {
+  padding-top: 24px;
+}
+
+/* Caption2/Regular */
+.service-tile__desc {
+  display: block;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.06px;
+}
+
+.service-tile__brands {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
 /* Illustration pokes out above the card's top-right corner (positions from the design) */
 .service-tile__art {
   position: absolute;
@@ -579,8 +606,8 @@ ul {
 }
 
 .service-tile__art--tunggul {
-  top: -11px;
-  right: 4px;
+  top: -18px;
+  right: -6px;
   width: 73px;
   height: 50px;
 }
@@ -628,25 +655,32 @@ ul {
 }
 
 .service-tile__art--crane {
-  top: -12px;
+  top: -20px;
   right: 0;
   width: 80px;
   height: 51px;
 }
 
 /* Body/Emphasized */
+/* Caption2/Regular */
+.services__hint {
+  margin-top: 40px;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.06px;
+}
+
 .services__cta {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 56px;
-  margin-top: 40px;
+  margin-top: 16px;
   padding: 14px 16px;
   background: var(--color-primary);
   border-radius: 99px;
   color: var(--color-white);
   font-size: 17px;
-  font-weight: 600;
   line-height: 22px;
   letter-spacing: -0.43px;
   transition: transform 0.15s ease;
@@ -666,10 +700,10 @@ ul {
 .reviews {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 30px;
   min-height: 402px;
   margin-top: 4px;
-  padding: 36px 0;
+  padding: 31px 0 41px;
   background: var(--color-primary);
   color: var(--color-white);
 }
@@ -679,6 +713,193 @@ ul {
   flex-direction: column;
   gap: 8px;
   padding: 0 var(--page-pad);
+}
+
+.reviews__list {
+  gap: 14px;
+  padding: 0 var(--page-pad);
+  scroll-padding-left: var(--page-pad);
+}
+
+/* White Google review card, 160px tall; widths follow the design */
+.review-card {
+  flex-shrink: 0;
+  height: 160px;
+  padding: 14px 16px;
+  background: var(--color-white);
+  color: var(--color-black);
+  scroll-snap-align: start;
+}
+
+.review-card--sm {
+  width: 224px;
+}
+
+.review-card--md {
+  width: 243px;
+}
+
+.review-card--lg {
+  width: 279px;
+}
+
+.review-card--xl {
+  width: 398px;
+}
+
+.review-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-card__author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-card__avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Footnote/Regular */
+.review-card__name {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.08px;
+  white-space: nowrap;
+}
+
+/* Subheadline/Regular */
+.review-card__rating {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+}
+
+/* Caption1/Regular */
+.review-card__text,
+.review-card__tags {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.review-card__text {
+  margin-top: 16px;
+}
+
+.review-card__text strong {
+  font-weight: 500;
+}
+
+.review-card__tags {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.review-card__tags-title {
+  font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  min-height: 402px;
+  margin-top: 4px;
+  padding: 35px var(--page-pad) 38px;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.site-footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Footnote/Regular */
+.site-footer__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.08px;
+}
+
+.site-footer__nav a:hover,
+.site-footer__nav a:focus-visible,
+.site-footer__company a:hover,
+.site-footer__company a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+.site-footer__social {
+  width: 130px;
+}
+
+/* Caption1/Regular */
+.site-footer__label {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* White pill linking to TikTok */
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8.15px;
+  margin-top: 16.44px;
+  padding: 8.89px 11.85px;
+  background: var(--color-white);
+  border-radius: 73px;
+  color: var(--color-black);
+  font-size: 11.11px;
+  line-height: 14.8px;
+  letter-spacing: -0.17px;
+  white-space: nowrap;
+}
+
+.social-pill:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+.site-footer__company {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 54px;
+}
+
+.site-footer__company-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-top: -7px; /* logo → name gap is 5px in the design */
+}
+
+.site-footer__company-name {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.08px;
+}
+
+/* Caption2/Regular */
+.site-footer__small {
+  font-size: 11px;
+  font-style: normal;
+  line-height: 13px;
+  letter-spacing: 0.06px;
 }
 
 /* ---------- Larger screens ---------- */
@@ -721,7 +942,8 @@ ul {
     max-width: 370px;
   }
 
-  .gallery {
+  .gallery,
+  .reviews__list {
     cursor: grab;
   }
 }
