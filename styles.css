@@ -248,7 +248,7 @@ main {
 }
 
 /* Contact strip under the header (Subheadline/Regular) */
-/* Pinned directly under the sticky header */
+/* Pinned directly under the sticky header; the whole bar is a tap-to-call link */
 .contact-bar {
   position: sticky;
   top: var(--header-height);
@@ -263,16 +263,28 @@ main {
   letter-spacing: -0.23px;
   text-align: center;
   background: var(--color-mint);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.15s ease;
+}
+
+/* Brief darker flash when tapped */
+.contact-bar:active {
+  background: #d3e3d6;
+}
+
+.contact-bar:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -4px;
 }
 
 /* Phone number in Subheadline/Emphasized */
-.contact-bar a {
+.contact-bar__number {
   font-weight: 600;
   white-space: nowrap;
 }
 
-.contact-bar a:hover,
-.contact-bar a:focus-visible {
+.contact-bar:hover .contact-bar__number {
   text-decoration: underline;
 }
 
