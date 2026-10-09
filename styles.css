@@ -921,6 +921,11 @@ main {
   letter-spacing: -0.08px;
 }
 
+/* Footer phone number stands out like the one in the contact bar */
+.site-footer__phone {
+  font-weight: 600;
+}
+
 /* Caption2/Regular */
 .site-footer__small {
   font-size: 11px;
