@@ -241,11 +241,134 @@ main {
   letter-spacing: 0.06px;
 }
 
-.menu-icon {
-  display: block;
+/* Menu button: 24px icon with a 44px tap area; swaps to a close icon while the menu is open */
+.menu-toggle {
+  display: grid;
+  place-items: center;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
+  margin: -10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: -4px;
+}
+
+.menu-toggle img {
+  grid-area: 1 / 1;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.menu-toggle__close {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__open {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__close {
+  opacity: 1;
+  transform: none;
+}
+
+/* Menu panel (design: 231px wide, white 50%, 16px radius), dropped from the top-right under the header */
+.site-menu {
+  position: fixed;
+  top: calc(var(--header-height) + 8px);
+  right: var(--gutter);
+  z-index: 40;
+  width: 231px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  /* Frosted glass so the items stay readable over photos */
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform-origin: top right;
+  animation: menu-in 0.18s ease-out;
+}
+
+.site-menu[hidden] {
+  display: none;
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 48px rows with a light divider; Body/Regular */
+.site-menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-contact);
+  color: var(--color-black);
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.43px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-menu li:last-child .site-menu__item {
+  border-bottom: 0;
+}
+
+a.site-menu__item:hover,
+a.site-menu__item:active {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+a.site-menu__item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+  border-radius: 8px;
+}
+
+/* Current language tag (only Bahasa Melayu for now) */
+.site-menu__lang {
+  padding: 2px 8px;
+  background: var(--color-primary);
+  border-radius: 99px;
+  color: var(--color-white);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+/* Light dimming layer behind the menu; tapping it closes the menu */
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 39;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.menu-backdrop[hidden] {
+  display: none;
 }
 
 /* Contact strip under the header (Subheadline/Regular) */
@@ -992,7 +1115,12 @@ main {
     transition: none;
   }
 
-  .feature {
+  .feature,
+  .site-menu {
     animation: none;
+  }
+
+  .menu-toggle img {
+    transition: none;
   }
 }

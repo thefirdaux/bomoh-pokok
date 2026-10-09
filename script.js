@@ -24,6 +24,43 @@
     });
   });
 
+  // Menu button opens the overlay menu; tapping a link, outside it, the button again or Esc closes it
+  var menuToggle = document.querySelector(".menu-toggle");
+  var menu = document.getElementById("site-menu");
+  var menuBackdrop = document.querySelector("[data-menu-backdrop]");
+
+  if (menuToggle && menu) {
+    var setMenu = function (open) {
+      menu.hidden = !open;
+      if (menuBackdrop) menuBackdrop.hidden = !open;
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+    };
+
+    menuToggle.addEventListener("click", function () {
+      setMenu(menu.hidden);
+    });
+
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        setMenu(false);
+      });
+    });
+
+    if (menuBackdrop) {
+      menuBackdrop.addEventListener("click", function () {
+        setMenu(false);
+      });
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !menu.hidden) {
+        setMenu(false);
+        menuToggle.focus();
+      }
+    });
+  }
+
   // Project gallery drifts sideways on a seamless loop; pauses while the user is touching it
   var GALLERY_SPEED = 80; // pixels per second
   var RESUME_DELAY = 2500; // ms after the user lets go

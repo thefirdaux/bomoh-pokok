@@ -71,7 +71,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=38" />
+  <link rel="stylesheet" href="styles.css?v=39" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -83,11 +83,25 @@
           <span class="brand__tagline">Servis Tebang &amp; Penjagaan Pokok Profesional</span>
         </span>
       </a>
-      <span class="menu-icon" aria-hidden="true">
-        <img src="assets/menu.svg" width="24" height="24" alt="" />
-      </span>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Buka menu">
+        <img class="menu-toggle__open" src="assets/menu.svg" width="24" height="24" alt="" />
+        <img class="menu-toggle__close" src="assets/close.svg" width="24" height="24" alt="" />
+      </button>
     </div>
   </header>
+
+  <!-- Overlay menu opened by the menu button -->
+  <div class="menu-backdrop" data-menu-backdrop hidden></div>
+  <nav class="site-menu" id="site-menu" aria-label="Menu utama" hidden>
+    <ul>
+      <li><a class="site-menu__item" href="#utama">Utama</a></li>
+      <li><a class="site-menu__item" href="#projek">Projek Kami</a></li>
+      <li><a class="site-menu__item" href="#servis">Servis Kami</a></li>
+      <li><a class="site-menu__item" href="#ulasan">Maklum Balas Pelanggan</a></li>
+      <li><a class="site-menu__item" href="#servis">Sebut Harga</a></li>
+      <li><span class="site-menu__item site-menu__item--static">Bahasa <span class="site-menu__lang">BM</span></span></li>
+    </ul>
+  </nav>
 
   <a class="contact-bar" href="tel:+60122760769" aria-label="Hubungi kami di +6012-276 0769">
     <span>Untuk pertanyaan, Hubungi <span class="contact-bar__number">+6012-276 0769</span></span>
@@ -602,6 +616,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=38"></script>
+  <script src="script.js?v=39"></script>
 </body>
 </html>
