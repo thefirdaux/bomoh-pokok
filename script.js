@@ -3,6 +3,27 @@
 
   // WhatsApp (wa.me/60122760769) and Google review links are written directly in index.html
 
+  // In-page links (footer menu, logo): smooth-scroll so the section starts right under
+  // the pinned header + contact bar
+  var pinnedBars = [document.querySelector(".site-header"), document.querySelector(".contact-bar")];
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    var target = document.getElementById(link.getAttribute("href").slice(1));
+    if (!target) return;
+
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      var pinnedHeight = pinnedBars.reduce(function (sum, bar) {
+        return sum + (bar ? bar.offsetHeight : 0);
+      }, 0);
+      var top = target.getBoundingClientRect().top + window.pageYOffset - pinnedHeight;
+      window.scrollTo({
+        top: Math.max(0, top),
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+      });
+    });
+  });
+
   // Project gallery drifts sideways on a seamless loop; pauses while the user is touching it
   var GALLERY_SPEED = 80; // pixels per second
   var RESUME_DELAY = 2500; // ms after the user lets go
