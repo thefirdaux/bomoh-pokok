@@ -29,15 +29,14 @@ html {
   scroll-behavior: smooth;
   /* Keep in-page links clear of the pinned header + contact bar */
   scroll-padding-top: calc(var(--header-height) + var(--contact-height));
-  /* Green beyond the page edges (iPhone bounce / under Safari's toolbar), matching header and footer;
-     the page itself stays mint via body */
-  background: var(--color-primary);
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
-  background: var(--color-mint);
+  /* Green so the area under Safari's toolbar and past the footer matches the footer.
+     The page content itself is mint (main + contact bar). */
+  background: var(--color-primary);
   color: var(--color-black);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -64,6 +63,10 @@ ul {
 ul {
   padding: 0;
   list-style: none;
+}
+
+main {
+  background: var(--color-mint);
 }
 
 /* Title1/Emphasized (28px bold) */
@@ -532,6 +535,7 @@ ul {
   flex-direction: column;
   gap: 10px;
   aspect-ratio: 1;
+  min-height: 0; /* keep the card square even if text runs long */
   padding: 32px 10px 24px;
   background: var(--color-white);
   border-radius: 16px;
@@ -564,6 +568,7 @@ ul {
 /* Body/Emphasized */
 .service-tile__name {
   display: block;
+  white-space: nowrap; /* line breaks are set in the HTML, as in the design */
   font-size: 17px;
   font-weight: 600;
   line-height: 22px;
@@ -814,8 +819,8 @@ ul {
 /* ---------- Footer ---------- */
 
 .site-footer {
-  min-height: 402px;
-  margin-top: 4px;
+  min-height: 406px;
+  border-top: 4px solid var(--color-mint);
   padding: 35px var(--page-pad) 38px;
   background: var(--color-primary);
   color: var(--color-white);
