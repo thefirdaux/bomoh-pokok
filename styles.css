@@ -7,6 +7,7 @@
   --color-border: #e5e7eb;
   --color-pill-border: #f5f5f5;
   --color-mint: #e8f1e9;
+  --color-inactive: #787474;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
@@ -685,13 +686,18 @@ main {
   height: 56px;
   margin-top: 16px;
   padding: 14px 16px;
-  background: var(--color-primary);
+  /* Grey until a service card is chosen, then brand green */
+  background: var(--color-inactive);
   border-radius: 99px;
   color: var(--color-white);
   font-size: 17px;
   line-height: 22px;
   letter-spacing: -0.43px;
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, background-color 0.25s ease;
+}
+
+.services:has(.service-tile__input:checked) .services__cta {
+  background: var(--color-primary);
 }
 
 .services__cta:active {
