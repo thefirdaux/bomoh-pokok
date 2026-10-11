@@ -640,8 +640,8 @@ a.site-menu__item:focus-visible {
 /* ---------- Services ---------- */
 
 .services {
-  /* Bottom room so the reviews start 44px below the quote button */
-  padding-bottom: 40px;
+  /* Bottom room so the reviews start 25px below the quote button */
+  padding-bottom: 21px;
 }
 
 /* Heading + cards over a faint photo (design: 780×976 at 10%, offset 166px left of the page) */
@@ -849,6 +849,7 @@ a.site-menu__item:focus-visible {
 /* Body/Emphasized */
 /* Caption2/Regular */
 .services__hint {
+  margin-top: 27px;
   padding: 0 var(--page-pad);
   font-size: 11px;
   line-height: 13px;
@@ -861,7 +862,7 @@ a.site-menu__item:focus-visible {
   align-items: center;
   justify-content: center;
   height: 56px;
-  margin: 16px var(--page-pad) 0;
+  margin: 8px var(--page-pad) 0;
   padding: 14px 16px;
   /* Grey until a service card is chosen, then brand green */
   background: var(--color-inactive);
