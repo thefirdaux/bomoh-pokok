@@ -640,8 +640,31 @@ a.site-menu__item:focus-visible {
 /* ---------- Services ---------- */
 
 .services {
-  margin-top: 4px;
-  padding: 24px var(--page-pad) 30px;
+  /* Bottom room so the reviews start 44px below the quote button */
+  padding-bottom: 40px;
+}
+
+/* Heading + cards over a faint photo (design: 780×976 at 10%, offset 166px left of the page) */
+.services__body {
+  position: relative;
+  overflow: hidden;
+  padding: 68px var(--page-pad) 27px;
+}
+
+.services__bg {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 367px);
+  width: 780px;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.services__intro,
+.services__picker {
+  position: relative;
 }
 
 .services__intro {
@@ -653,8 +676,13 @@ a.site-menu__item:focus-visible {
 .services__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px 16px;
-  margin-top: 40px;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+/* Chainsaw card spans the full width */
+.services__wide {
+  grid-column: 1 / -1;
 }
 
 /* 177×177 white card; the name sits 46px from the top */
@@ -713,8 +741,20 @@ a.site-menu__item:focus-visible {
 }
 
 /* The Chainsaw card has an extra row of brand logos, so it starts higher */
-.service-tile--brands {
-  padding-top: 24px;
+/* Wide card (Chainsaw): 370×140, content inset 20px, illustration on the right */
+.service-tile--wide {
+  gap: 0;
+  aspect-ratio: auto;
+  height: 140px;
+  padding: 32px 20px 24px;
+}
+
+.service-tile--wide .service-tile__brands {
+  margin-top: 8px;
+}
+
+.service-tile--wide .service-tile__desc {
+  margin-top: 16px;
 }
 
 /* Caption2/Regular */
@@ -728,7 +768,7 @@ a.site-menu__item:focus-visible {
 .service-tile__brands {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 8px;
 }
 
 /* Illustration pokes out above the card's top-right corner (positions from the design) */
@@ -793,8 +833,8 @@ a.site-menu__item:focus-visible {
 }
 
 .service-tile__art--chainsaw {
-  top: -7px;
-  right: 0;
+  top: 31px;
+  right: 20px;
   width: 80px;
   height: 41px;
 }
@@ -809,7 +849,7 @@ a.site-menu__item:focus-visible {
 /* Body/Emphasized */
 /* Caption2/Regular */
 .services__hint {
-  margin-top: 40px;
+  padding: 0 var(--page-pad);
   font-size: 11px;
   line-height: 13px;
   letter-spacing: 0.06px;
@@ -821,7 +861,7 @@ a.site-menu__item:focus-visible {
   align-items: center;
   justify-content: center;
   height: 56px;
-  margin-top: 16px;
+  margin: 16px var(--page-pad) 0;
   padding: 14px 16px;
   /* Grey until a service card is chosen, then brand green */
   background: var(--color-inactive);
@@ -962,8 +1002,8 @@ a.site-menu__item:focus-visible {
 /* ---------- Footer ---------- */
 
 .site-footer {
-  min-height: 406px;
-  border-top: 4px solid var(--color-mint);
+  min-height: 418px;
+  border-top: 16px solid var(--color-mint);
   padding: 35px var(--page-pad) 38px;
   background: var(--color-primary);
   color: var(--color-white);

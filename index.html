@@ -71,7 +71,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=39" />
+  <link rel="stylesheet" href="styles.css?v=40" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -424,77 +424,80 @@
 
     <!-- Services -->
     <section class="services" id="servis" aria-labelledby="services-title">
-      <div class="services__intro">
-        <h2 class="section-title" id="services-title"><span class="text-accent">Bukan</span><br />Tebang Pokok Sahaja</h2>
-        <p class="section-lead">Bomoh Pokok turut menyediakan pelbagai perkhidmatan profesional berkaitan pokok, tanah dan kerja di tempat tinggi di seluruh Semenanjung Malaysia</p>
-      </div>
+      <div class="services__body">
+        <img class="services__bg" src="assets/services-bg.jpg" alt="" loading="lazy" />
+        <div class="services__intro">
+          <h2 class="section-title" id="services-title"><span class="text-accent">Bukan</span><br />Tebang Pokok Sahaja</h2>
+          <p class="section-lead">Bomoh Pokok turut menyediakan pelbagai perkhidmatan profesional berkaitan pokok, tanah dan kerja di tempat tinggi di seluruh Semenanjung Malaysia</p>
+        </div>
 
-      <fieldset class="services__picker">
-        <legend class="visually-hidden">Pilih servis</legend>
-        <ul class="services__grid">
-          <li>
-            <label class="service-tile">
-              <input class="service-tile__input" type="radio" name="service" value="Cantas &amp; Pengurusan Dahan" />
-              <span class="service-tile__art service-tile__art--cantas" aria-hidden="true"><img src="assets/services/cantas.png" alt="" loading="lazy" /></span>
-              <span class="service-tile__name">Cantas &amp;<br />Pengurusan Dahan</span>
-              <span class="service-tile__desc">Mencantas dahan untuk mengawal pertumbuhan pokok, menjaga kesihatan dan memastikan keselamatan persekitaran.</span>
-            </label>
-          </li>
-          <li>
-            <label class="service-tile">
-              <input class="service-tile__input" type="radio" name="service" value="Pembuangan Tunggul Pokok" />
-              <span class="service-tile__art service-tile__art--tunggul" aria-hidden="true"><img src="assets/services/tunggul.png" alt="" loading="lazy" /></span>
-              <span class="service-tile__name">Pembuangan<br />Tunggul Pokok</span>
-              <span class="service-tile__desc">Menghapuskan tunggul pokok hingga ke akar bagi memastikan kawasan lebih bersih, kemas dan selamat.</span>
-            </label>
-          </li>
-          <li>
-            <label class="service-tile">
-              <input class="service-tile__input" type="radio" name="service" value="Pembersihan Tanah Lot" />
-              <span class="service-tile__art service-tile__art--tanah" aria-hidden="true"><img src="assets/services/tanah.png" alt="" loading="lazy" /></span>
-              <span class="service-tile__name">Pembersihan<br />Tanah Lot</span>
-              <span class="service-tile__desc">Membersihkan kawasan tanah daripada semak samun, rumput dan pokok bagi menyediakan ruang yang lebih bersih dan teratur.</span>
-            </label>
-          </li>
-          <li>
-            <label class="service-tile">
-              <input class="service-tile__input" type="radio" name="service" value="Servis Menyelamat Dron" />
-              <span class="service-tile__art service-tile__art--dron" aria-hidden="true"><img src="assets/services/dron.png" alt="" loading="lazy" /></span>
-              <span class="service-tile__name">Servis Menyelamat<br />Dron</span>
-              <span class="service-tile__desc">Menyelamatkan dron yang tersangkut di pokok atau lokasi tinggi dengan kaedah yang sesuai dan selamat.</span>
-            </label>
-          </li>
-          <li>
-            <label class="service-tile">
-              <input class="service-tile__input" type="radio" name="service" value="Servis Potong Rumput" />
-              <span class="service-tile__art service-tile__art--rumput" aria-hidden="true"><img src="assets/services/rumput.png" alt="" loading="lazy" /></span>
-              <span class="service-tile__name">Servis Potong<br />Rumput</span>
-              <span class="service-tile__desc">Memotong rumput dan membersihkan kawasan untuk persekitaran yang lebih kemas dan terjaga.</span>
-            </label>
-          </li>
-          <li>
-            <label class="service-tile service-tile--brands">
-              <input class="service-tile__input" type="radio" name="service" value="Servis Chainsaw" />
-              <span class="service-tile__art service-tile__art--chainsaw" aria-hidden="true"><img src="assets/services/chainsaw.png" alt="" loading="lazy" /></span>
-              <span class="service-tile__name">Servis<br />Chainsaw</span>
-              <span class="service-tile__brands">
-                <img src="assets/brands/echo.png" width="52" height="10.89" alt="ECHO" />
-                <img src="assets/brands/stihl.png" width="52" height="12.23" alt="STIHL" />
-                <img src="assets/brands/husqvarna.png" width="12.04" height="12.23" alt="Husqvarna" />
-              </span>
-              <span class="service-tile__desc">Membaiki dan menyelenggara chainsaw bagi memastikan prestasi mesin kekal optimum.</span>
-            </label>
-          </li>
-          <li>
-            <label class="service-tile">
-              <input class="service-tile__input" type="radio" name="service" value="Sewa Crane &amp; Skylift" />
-              <span class="service-tile__art service-tile__art--crane" aria-hidden="true"><img src="assets/services/crane.png" alt="" loading="lazy" /></span>
-              <span class="service-tile__name">Sewa Crane &amp;<br />Skylift</span>
-              <span class="service-tile__desc">Menyediakan sewaan crane dan skylift untuk kerja mengangkat beban serta akses ke kawasan tinggi.</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+        <fieldset class="services__picker">
+          <legend class="visually-hidden">Pilih servis</legend>
+          <ul class="services__grid">
+            <li>
+              <label class="service-tile">
+                <input class="service-tile__input" type="radio" name="service" value="Cantas &amp; Pengurusan Dahan" />
+                <span class="service-tile__art service-tile__art--cantas" aria-hidden="true"><img src="assets/services/cantas.png" alt="" loading="lazy" /></span>
+                <span class="service-tile__name">Cantas &amp;<br />Pengurusan Dahan</span>
+                <span class="service-tile__desc">Mencantas dahan untuk mengawal pertumbuhan pokok, menjaga kesihatan dan memastikan keselamatan persekitaran.</span>
+              </label>
+            </li>
+            <li>
+              <label class="service-tile">
+                <input class="service-tile__input" type="radio" name="service" value="Pembuangan Tunggul Pokok" />
+                <span class="service-tile__art service-tile__art--tunggul" aria-hidden="true"><img src="assets/services/tunggul.png" alt="" loading="lazy" /></span>
+                <span class="service-tile__name">Pembuangan<br />Tunggul Pokok</span>
+                <span class="service-tile__desc">Menghapuskan tunggul pokok hingga ke akar bagi memastikan kawasan lebih bersih, kemas dan selamat.</span>
+              </label>
+            </li>
+            <li>
+              <label class="service-tile">
+                <input class="service-tile__input" type="radio" name="service" value="Pembersihan Tanah Lot" />
+                <span class="service-tile__art service-tile__art--tanah" aria-hidden="true"><img src="assets/services/tanah.png" alt="" loading="lazy" /></span>
+                <span class="service-tile__name">Pembersihan<br />Tanah Lot</span>
+                <span class="service-tile__desc">Membersihkan kawasan tanah daripada semak samun, rumput dan pokok bagi menyediakan ruang yang lebih bersih dan teratur.</span>
+              </label>
+            </li>
+            <li>
+              <label class="service-tile">
+                <input class="service-tile__input" type="radio" name="service" value="Servis Menyelamat Dron" />
+                <span class="service-tile__art service-tile__art--dron" aria-hidden="true"><img src="assets/services/dron.png" alt="" loading="lazy" /></span>
+                <span class="service-tile__name">Servis Menyelamat<br />Dron</span>
+                <span class="service-tile__desc">Menyelamatkan dron yang tersangkut di pokok atau lokasi tinggi dengan kaedah yang sesuai dan selamat.</span>
+              </label>
+            </li>
+            <li>
+              <label class="service-tile">
+                <input class="service-tile__input" type="radio" name="service" value="Servis Potong Rumput" />
+                <span class="service-tile__art service-tile__art--rumput" aria-hidden="true"><img src="assets/services/rumput.png" alt="" loading="lazy" /></span>
+                <span class="service-tile__name">Servis Potong<br />Rumput</span>
+                <span class="service-tile__desc">Memotong rumput dan membersihkan kawasan untuk persekitaran yang lebih kemas dan terjaga.</span>
+              </label>
+            </li>
+            <li>
+              <label class="service-tile">
+                <input class="service-tile__input" type="radio" name="service" value="Sewa Crane &amp; Skylift" />
+                <span class="service-tile__art service-tile__art--crane" aria-hidden="true"><img src="assets/services/crane.png" alt="" loading="lazy" /></span>
+                <span class="service-tile__name">Sewa Crane &amp;<br />Skylift</span>
+                <span class="service-tile__desc">Menyediakan sewaan crane dan skylift untuk kerja mengangkat beban serta akses ke kawasan tinggi.</span>
+              </label>
+            </li>
+            <li class="services__wide">
+              <label class="service-tile service-tile--wide">
+                <input class="service-tile__input" type="radio" name="service" value="Servis Chainsaw" />
+                <span class="service-tile__art service-tile__art--chainsaw" aria-hidden="true"><img src="assets/services/chainsaw.png" alt="" loading="lazy" /></span>
+                <span class="service-tile__name">Servis Chainsaw</span>
+                <span class="service-tile__brands">
+                  <img src="assets/brands/echo.png" width="57" height="12" alt="ECHO" />
+                  <img src="assets/brands/stihl.png" width="51" height="12" alt="STIHL" />
+                  <img src="assets/brands/husqvarna.svg" width="65.73" height="12" alt="Husqvarna" />
+                </span>
+                <span class="service-tile__desc">Membaiki dan menyelenggara chainsaw bagi<br />memastikan prestasi mesin kekal optimum</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
 
       <p class="services__hint">Pilih salah satu jenis servis untuk mendapatkan sebut harga percuma.</p>
       <a class="services__cta" data-quote-cta href="https://wa.me/60122760769?text=Hai%20Bomoh%20Pokok%2C%20saya%20ingin%20mendapatkan%20sebut%20harga%20untuk%20servis%20pokok." target="_blank" rel="noopener">Dapatkan Sebut Harga</a>
@@ -616,6 +619,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=39"></script>
+  <script src="script.js?v=40"></script>
 </body>
 </html>
