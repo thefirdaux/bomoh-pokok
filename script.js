@@ -34,7 +34,11 @@
       menu.hidden = !open;
       if (menuBackdrop) menuBackdrop.hidden = !open;
       menuToggle.setAttribute("aria-expanded", String(open));
-      menuToggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+      // Labels come from the page (data-label-open / data-label-close) so each language sets its own
+      menuToggle.setAttribute(
+        "aria-label",
+        open ? menuToggle.getAttribute("data-label-close") || "Tutup menu" : menuToggle.getAttribute("data-label-open") || "Buka menu"
+      );
     };
 
     menuToggle.addEventListener("click", function () {
@@ -165,10 +169,14 @@
 
   if (quoteCta) {
     var generalHref = quoteCta.href;
+    // Message wording comes from the page (data-quote-template) so each language sets its own
+    var quoteTemplate =
+      quoteCta.getAttribute("data-quote-template") ||
+      "Hai Bomoh Pokok, saya ingin mendapatkan sebut harga percuma untuk {service}.";
 
     document.querySelectorAll('input[name="service"]').forEach(function (choice) {
       choice.addEventListener("change", function () {
-        var message = "Hai Bomoh Pokok, saya ingin mendapatkan sebut harga percuma untuk " + choice.value + ".";
+        var message = quoteTemplate.replace("{service}", choice.value);
         quoteCta.href = generalHref.split("?")[0] + "?text=" + encodeURIComponent(message);
       });
     });

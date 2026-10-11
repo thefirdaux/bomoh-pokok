@@ -348,7 +348,24 @@ a.site-menu__item:focus-visible {
   border-radius: 8px;
 }
 
-/* Current language tag (only Bahasa Melayu for now) */
+/* Language switch: current language filled, the other one outlined and tappable */
+.site-menu__langs {
+  display: flex;
+  gap: 6px;
+}
+
+.site-menu__lang--link {
+  background: transparent !important;
+  box-shadow: inset 0 0 0 1px var(--color-primary);
+  color: var(--color-primary) !important;
+}
+
+.site-menu__lang--link:hover,
+.site-menu__lang--link:focus-visible {
+  background: var(--color-mint) !important;
+  outline: none;
+}
+
 .site-menu__lang {
   padding: 2px 8px;
   background: var(--color-primary);
