@@ -182,24 +182,6 @@
     });
   }
 
-  // Floating WhatsApp button stays hidden over the hero (it would cover the feature list)
-  // and appears once the visitor has scrolled past it
-  var whatsappFab = document.querySelector(".whatsapp-fab");
-  var heroSection = document.querySelector(".hero");
-
-  if (whatsappFab && heroSection && "IntersectionObserver" in window) {
-    whatsappFab.classList.add("is-hidden");
-
-    new IntersectionObserver(
-      function (entries) {
-        var entry = entries[0];
-        var pastHero = !entry.isIntersecting && entry.boundingClientRect.top < 0;
-        whatsappFab.classList.toggle("is-hidden", !pastHero);
-      },
-      { rootMargin: "-124px 0px 0px 0px" } // 124px = pinned header + contact bar
-    ).observe(heroSection);
-  }
-
   // Gallery photos past the first few blocks carry data-src and load only as they
   // approach the visible part of the gallery (native lazy loading fetches far too early)
   document.querySelectorAll(".gallery").forEach(function (gallery) {
