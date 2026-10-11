@@ -640,44 +640,45 @@ a.site-menu__item:focus-visible {
 /* ---------- Services ---------- */
 
 .services {
-  /* Bottom room so the reviews start 25px below the quote button */
-  padding-bottom: 21px;
+  /* Bottom room so the reviews start 68px below the quote button */
+  padding-bottom: 64px;
 }
 
-/* Heading + cards over a faint photo (design: 780×976 at 10%, offset 166px left of the page) */
-.services__body {
-  position: relative;
-  overflow: hidden;
-  padding: 68px var(--page-pad) 27px;
-}
-
-.services__bg {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 367px);
-  width: 780px;
-  height: 100%;
+/* Full-width photo banner above the services (design: 402×503 at 90%) */
+.services__banner {
+  width: 100%;
+  height: 503px;
   object-fit: cover;
-  opacity: 0.1;
-  pointer-events: none;
+  opacity: 0.9;
 }
 
-.services__intro,
-.services__picker {
-  position: relative;
+.services__body {
+  padding: 17px var(--page-pad) 40px;
 }
 
 .services__intro {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 12px;
+}
+
+.services__title {
+  color: var(--color-primary);
+}
+
+/* Callout/Regular */
+.services__text,
+.services__hint {
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: -0.31px;
 }
 
 .services__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 4px;
+  margin-top: 40px;
 }
 
 /* Chainsaw card spans the full width */
@@ -846,14 +847,9 @@ a.site-menu__item:focus-visible {
   height: 51px;
 }
 
-/* Body/Emphasized */
-/* Caption2/Regular */
+/* Hint sits between the description and the cards */
 .services__hint {
-  margin-top: 27px;
-  padding: 0 var(--page-pad);
-  font-size: 11px;
-  line-height: 13px;
-  letter-spacing: 0.06px;
+  margin-top: 32px;
 }
 
 .services__cta {
@@ -861,7 +857,7 @@ a.site-menu__item:focus-visible {
   align-items: center;
   justify-content: center;
   height: 56px;
-  margin: 8px var(--page-pad) 0;
+  margin: 0 var(--page-pad);
   padding: 14px 16px;
   /* Grey until a service card is chosen, then brand green */
   background: var(--color-inactive);
