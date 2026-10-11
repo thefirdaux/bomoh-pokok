@@ -998,8 +998,8 @@ a.site-menu__item:focus-visible {
 /* ---------- Footer ---------- */
 
 .site-footer {
-  min-height: 418px;
-  border-top: 16px solid var(--color-mint);
+  min-height: 406px;
+  border-top: 4px solid var(--color-mint);
   padding: 35px var(--page-pad) 38px;
   background: var(--color-primary);
   color: var(--color-white);
