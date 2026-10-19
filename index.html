@@ -69,7 +69,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=50" />
+  <link rel="stylesheet" href="styles.css?v=51" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -81,6 +81,19 @@
           <span class="brand__tagline">Servis Tebang &amp; Penjagaan Pokok Profesional</span>
         </span>
       </a>
+      <nav class="desktop-nav" aria-label="Navigasi utama">
+        <a class="desktop-nav__link" href="#projek">Projek Kami</a>
+        <a class="desktop-nav__link" href="#servis">Servis Kami</a>
+        <a class="desktop-nav__link" href="#ulasan">Maklum Balas</a>
+        <a class="desktop-nav__link" href="#servis">Sebut Harga</a>
+        <span class="desktop-nav__lang">
+          Bahasa
+          <span class="desktop-nav__langs">
+            <span class="desktop-nav__code" aria-current="true">BM</span>
+            <a class="desktop-nav__code desktop-nav__code--link" href="en/" hreflang="en" lang="en">EN</a>
+          </span>
+        </span>
+      </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Buka menu" data-label-open="Buka menu" data-label-close="Tutup menu">
         <img class="menu-toggle__open" src="assets/menu.svg" width="24" height="24" alt="" />
         <img class="menu-toggle__close" src="assets/close.svg" width="24" height="24" alt="" />
@@ -117,13 +130,16 @@
     <!-- Hero -->
     <section class="hero" id="utama" aria-labelledby="hero-title">
       <div class="hero__media">
-        <img src="assets/hero.jpg" alt="Pekerja Bomoh Pokok memotong dahan pokok menggunakan gergaji rantai sambil memakai tali keselamatan" />
+        <picture>
+          <source media="(min-width: 640px)" srcset="assets/hero-desktop.jpg" />
+          <img src="assets/hero.jpg" alt="Pekerja Bomoh Pokok memotong dahan pokok menggunakan gergaji rantai sambil memakai tali keselamatan" />
+        </picture>
       </div>
 
       <div class="hero__content">
         <div class="hero__intro">
           <div class="hero__heading">
-            <h1 class="hero__title" id="hero-title">Servis<br />Tebang Pokok<br />Profesional</h1>
+            <h1 class="hero__title" id="hero-title">Servis <br />Tebang Pokok <br />Profesional</h1>
 
             <a class="review-pill" href="https://maps.app.goo.gl/sbUfZrj76yN1f9YQ7" target="_blank" rel="noopener" aria-label="Penilaian Google Review 4.8 daripada 5">
               <span class="review-pill__source">
@@ -143,15 +159,15 @@
         <ul class="features">
           <li class="feature">
             <span class="feature__icon feature__icon--map"><img src="assets/feature-semenanjung.png" alt="" /></span>
-            <span>Beroperasi Seluruh<br />Semenanjung Malaysia</span>
+            <span>Beroperasi Seluruh <br />Semenanjung Malaysia</span>
           </li>
           <li class="feature">
             <span class="feature__icon"><img src="assets/feature-consultation.svg" width="40" height="40" alt="" /></span>
-            <span>Konsultasi<br />Profesional disediakan</span>
+            <span>Konsultasi <br />Profesional disediakan</span>
           </li>
           <li class="feature">
             <span class="feature__icon"><img src="assets/feature-certified.svg" width="40" height="40" alt="" /></span>
-            <span>Pekerja<br />terlatih &amp; berpengalaman</span>
+            <span>Pekerja <br />terlatih &amp; berpengalaman</span>
           </li>
         </ul>
       </div>
@@ -161,7 +177,7 @@
     <section class="projects" id="projek" aria-labelledby="projects-title">
       <div class="projects__intro">
         <h2 class="section-title projects__title" id="projects-title">
-          Lebih <span class="text-accent" data-count-to="1000">1000</span> projek<br />dikendalikan oleh kami
+          Lebih <span class="text-accent" data-count-to="1000">1000</span> projek <br />dikendalikan oleh kami
         </h2>
         <p class="section-lead">Sejak tahun 2013</p>
       </div>
@@ -169,276 +185,279 @@
       <div class="scroller gallery" data-scroller data-autoscroll tabindex="0" aria-label="Galeri projek">
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" src="assets/gallery/001.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 1 daripada 94" loading="lazy" />
-            <img class="gallery__img gallery__img--half" src="assets/gallery/002.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 2 daripada 94" loading="lazy" />
+            <img class="gallery__img gallery__img--half" src="assets/gallery/001.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 1 daripada 94" loading="lazy" data-src-lg="assets/gallery/lg/001.jpg" />
+            <img class="gallery__img gallery__img--half" src="assets/gallery/002.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 2 daripada 94" loading="lazy" data-src-lg="assets/gallery/lg/002.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" src="assets/gallery/003.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 3 daripada 94" loading="lazy" />
+          <img class="gallery__img gallery__img--wide" src="assets/gallery/003.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 3 daripada 94" loading="lazy" data-src-lg="assets/gallery/lg/003.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" src="assets/gallery/004.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 4 daripada 94" loading="lazy" />
+          <img class="gallery__img gallery__img--tall" src="assets/gallery/004.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 4 daripada 94" loading="lazy" data-src-lg="assets/gallery/lg/004.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" src="assets/gallery/005.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 5 daripada 94" loading="lazy" />
+          <img class="gallery__img gallery__img--wide" src="assets/gallery/005.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 5 daripada 94" loading="lazy" data-src-lg="assets/gallery/lg/005.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" src="assets/gallery/006.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 6 daripada 94" loading="lazy" />
-            <img class="gallery__img gallery__img--half" src="assets/gallery/007.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 7 daripada 94" loading="lazy" />
+            <img class="gallery__img gallery__img--half" src="assets/gallery/006.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 6 daripada 94" loading="lazy" data-src-lg="assets/gallery/lg/006.jpg" />
+            <img class="gallery__img gallery__img--half" src="assets/gallery/007.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 7 daripada 94" loading="lazy" data-src-lg="assets/gallery/lg/007.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/008.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 8 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/009.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 9 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/010.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 10 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/011.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 11 daripada 94" />
-          </div>
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/012.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 12 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/013.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 13 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/014.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 14 daripada 94" />
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/015.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 15 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/016.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 16 daripada 94" />
-          </div>
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/017.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 17 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/018.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 18 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/008.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 8 daripada 94" data-src-lg="assets/gallery/lg/008.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/009.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 9 daripada 94" data-src-lg="assets/gallery/lg/009.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/019.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 19 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/020.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 20 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/010.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 10 daripada 94" data-src-lg="assets/gallery/lg/010.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/011.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 11 daripada 94" data-src-lg="assets/gallery/lg/011.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/021.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 21 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/012.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 12 daripada 94" data-src-lg="assets/gallery/lg/012.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/022.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 22 daripada 94" />
+          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/013.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 13 daripada 94" data-src-lg="assets/gallery/lg/013.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/023.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 23 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/014.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 14 daripada 94" data-src-lg="assets/gallery/lg/014.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/024.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 24 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/025.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 25 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/015.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 15 daripada 94" data-src-lg="assets/gallery/lg/015.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/016.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 16 daripada 94" data-src-lg="assets/gallery/lg/016.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/026.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 26 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/027.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 27 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/028.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 28 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/029.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 29 daripada 94" />
-          </div>
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/030.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 30 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/031.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 31 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/032.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 32 daripada 94" />
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/033.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 33 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/034.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 34 daripada 94" />
-          </div>
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/035.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 35 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/036.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 36 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/017.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 17 daripada 94" data-src-lg="assets/gallery/lg/017.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/018.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 18 daripada 94" data-src-lg="assets/gallery/lg/018.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/037.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 37 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/038.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 38 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/019.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 19 daripada 94" data-src-lg="assets/gallery/lg/019.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/020.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 20 daripada 94" data-src-lg="assets/gallery/lg/020.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/039.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 39 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/021.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 21 daripada 94" data-src-lg="assets/gallery/lg/021.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/040.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 40 daripada 94" />
+          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/022.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 22 daripada 94" data-src-lg="assets/gallery/lg/022.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/041.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 41 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/023.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 23 daripada 94" data-src-lg="assets/gallery/lg/023.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/042.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 42 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/043.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 43 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/024.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 24 daripada 94" data-src-lg="assets/gallery/lg/024.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/025.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 25 daripada 94" data-src-lg="assets/gallery/lg/025.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/044.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 44 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/045.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 45 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/046.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 46 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/047.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 47 daripada 94" />
-          </div>
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/048.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 48 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/049.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 49 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/050.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 50 daripada 94" />
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/051.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 51 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/052.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 52 daripada 94" />
-          </div>
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/053.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 53 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/054.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 54 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/026.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 26 daripada 94" data-src-lg="assets/gallery/lg/026.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/027.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 27 daripada 94" data-src-lg="assets/gallery/lg/027.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/055.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 55 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/056.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 56 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/028.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 28 daripada 94" data-src-lg="assets/gallery/lg/028.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/029.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 29 daripada 94" data-src-lg="assets/gallery/lg/029.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/057.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 57 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/030.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 30 daripada 94" data-src-lg="assets/gallery/lg/030.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/058.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 58 daripada 94" />
+          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/031.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 31 daripada 94" data-src-lg="assets/gallery/lg/031.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/059.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 59 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/032.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 32 daripada 94" data-src-lg="assets/gallery/lg/032.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/060.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 60 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/061.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 61 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/033.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 33 daripada 94" data-src-lg="assets/gallery/lg/033.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/034.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 34 daripada 94" data-src-lg="assets/gallery/lg/034.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/062.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 62 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/063.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 63 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/064.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 64 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/065.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 65 daripada 94" />
-          </div>
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/066.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 66 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/067.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 67 daripada 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/068.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 68 daripada 94" />
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/069.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 69 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/070.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 70 daripada 94" />
-          </div>
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/071.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 71 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/072.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 72 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/035.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 35 daripada 94" data-src-lg="assets/gallery/lg/035.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/036.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 36 daripada 94" data-src-lg="assets/gallery/lg/036.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/073.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 73 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/074.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 74 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/037.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 37 daripada 94" data-src-lg="assets/gallery/lg/037.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/038.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 38 daripada 94" data-src-lg="assets/gallery/lg/038.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/075.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 75 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/039.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 39 daripada 94" data-src-lg="assets/gallery/lg/039.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/076.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 76 daripada 94" />
+          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/040.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 40 daripada 94" data-src-lg="assets/gallery/lg/040.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/077.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 77 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/041.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 41 daripada 94" data-src-lg="assets/gallery/lg/041.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/078.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 78 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/079.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 79 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/042.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 42 daripada 94" data-src-lg="assets/gallery/lg/042.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/043.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 43 daripada 94" data-src-lg="assets/gallery/lg/043.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/080.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 80 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/081.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 81 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/044.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 44 daripada 94" data-src-lg="assets/gallery/lg/044.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/045.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 45 daripada 94" data-src-lg="assets/gallery/lg/045.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/082.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 82 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/083.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 83 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/046.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 46 daripada 94" data-src-lg="assets/gallery/lg/046.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/047.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 47 daripada 94" data-src-lg="assets/gallery/lg/047.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/084.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 84 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/048.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 48 daripada 94" data-src-lg="assets/gallery/lg/048.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/085.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 85 daripada 94" />
+          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/049.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 49 daripada 94" data-src-lg="assets/gallery/lg/049.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/050.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 50 daripada 94" data-src-lg="assets/gallery/lg/050.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/086.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 86 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/087.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 87 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/051.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 51 daripada 94" data-src-lg="assets/gallery/lg/051.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/052.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 52 daripada 94" data-src-lg="assets/gallery/lg/052.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/088.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 88 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/089.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 89 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/053.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 53 daripada 94" data-src-lg="assets/gallery/lg/053.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/054.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 54 daripada 94" data-src-lg="assets/gallery/lg/054.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/090.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 90 daripada 94" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/091.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 91 daripada 94" />
-            <img class="gallery__img gallery__img--half" data-src="assets/gallery/092.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 92 daripada 94" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/055.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 55 daripada 94" data-src-lg="assets/gallery/lg/055.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/056.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 56 daripada 94" data-src-lg="assets/gallery/lg/056.jpg" />
+          </div>
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/057.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 57 daripada 94" data-src-lg="assets/gallery/lg/057.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/058.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 58 daripada 94" data-src-lg="assets/gallery/lg/058.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/059.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 59 daripada 94" data-src-lg="assets/gallery/lg/059.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/060.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 60 daripada 94" data-src-lg="assets/gallery/lg/060.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/061.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 61 daripada 94" data-src-lg="assets/gallery/lg/061.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/093.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 93 daripada 94" />
-          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/094.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 94 daripada 94" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/062.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 62 daripada 94" data-src-lg="assets/gallery/lg/062.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/063.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 63 daripada 94" data-src-lg="assets/gallery/lg/063.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/064.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 64 daripada 94" data-src-lg="assets/gallery/lg/064.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/065.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 65 daripada 94" data-src-lg="assets/gallery/lg/065.jpg" />
+          </div>
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/066.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 66 daripada 94" data-src-lg="assets/gallery/lg/066.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/067.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 67 daripada 94" data-src-lg="assets/gallery/lg/067.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/068.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 68 daripada 94" data-src-lg="assets/gallery/lg/068.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/069.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 69 daripada 94" data-src-lg="assets/gallery/lg/069.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/070.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 70 daripada 94" data-src-lg="assets/gallery/lg/070.jpg" />
+          </div>
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/071.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 71 daripada 94" data-src-lg="assets/gallery/lg/071.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/072.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 72 daripada 94" data-src-lg="assets/gallery/lg/072.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/073.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 73 daripada 94" data-src-lg="assets/gallery/lg/073.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/074.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 74 daripada 94" data-src-lg="assets/gallery/lg/074.jpg" />
+          </div>
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/075.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 75 daripada 94" data-src-lg="assets/gallery/lg/075.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--tall" data-src="assets/gallery/076.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 76 daripada 94" data-src-lg="assets/gallery/lg/076.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/077.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 77 daripada 94" data-src-lg="assets/gallery/lg/077.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/078.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 78 daripada 94" data-src-lg="assets/gallery/lg/078.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/079.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 79 daripada 94" data-src-lg="assets/gallery/lg/079.jpg" />
+          </div>
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/080.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 80 daripada 94" data-src-lg="assets/gallery/lg/080.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/081.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 81 daripada 94" data-src-lg="assets/gallery/lg/081.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/082.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 82 daripada 94" data-src-lg="assets/gallery/lg/082.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/083.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 83 daripada 94" data-src-lg="assets/gallery/lg/083.jpg" />
+          </div>
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/084.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 84 daripada 94" data-src-lg="assets/gallery/lg/084.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/085.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 85 daripada 94" data-src-lg="assets/gallery/lg/085.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/086.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 86 daripada 94" data-src-lg="assets/gallery/lg/086.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/087.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 87 daripada 94" data-src-lg="assets/gallery/lg/087.jpg" />
+          </div>
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/088.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 88 daripada 94" data-src-lg="assets/gallery/lg/088.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/089.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 89 daripada 94" data-src-lg="assets/gallery/lg/089.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/090.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 90 daripada 94" data-src-lg="assets/gallery/lg/090.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/091.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 91 daripada 94" data-src-lg="assets/gallery/lg/091.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="assets/gallery/092.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 92 daripada 94" data-src-lg="assets/gallery/lg/092.jpg" />
+          </div>
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/093.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 93 daripada 94" data-src-lg="assets/gallery/lg/093.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="assets/gallery/094.jpg" alt="Projek tebang dan potong pokok Bomoh Pokok, gambar 94 daripada 94" data-src-lg="assets/gallery/lg/094.jpg" />
         </div>
       </div>
     </section>
 
     <!-- Services -->
     <section class="services" id="servis" aria-labelledby="services-title">
-      <img class="services__banner" src="assets/services-bg.jpg" width="640" height="800" alt="Pekerja Bomoh Pokok memanjat pokok dengan topi keledar dan tali keselamatan" loading="lazy" />
+      <picture>
+        <source media="(min-width: 640px)" srcset="assets/services-banner-desktop.jpg" />
+        <img class="services__banner" src="assets/services-bg.jpg" width="640" height="800" alt="Pekerja Bomoh Pokok memanjat pokok dengan topi keledar dan tali keselamatan" loading="lazy" />
+      </picture>
 
       <div class="services__body">
         <div class="services__intro">
-          <h2 class="section-title services__title" id="services-title"><span class="text-accent">Bukan</span><br />Sekadar Tebang Pokok</h2>
+          <h2 class="section-title services__title" id="services-title"><span class="text-accent">Bukan</span> <br />Sekadar Tebang Pokok</h2>
           <p class="services__text">Bomoh Pokok turut menyediakan pelbagai perkhidmatan profesional berkaitan pokok, tanah dan kerja di tempat tinggi di seluruh Semenanjung Malaysia.</p>
         </div>
 
-        <p class="services__hint">Pilih salah satu jenis servis untuk mendapatkan<br />sebut harga percuma.</p>
+        <p class="services__hint">Pilih salah satu jenis servis untuk mendapatkan <br />sebut harga percuma.</p>
 
         <fieldset class="services__picker">
           <legend class="visually-hidden">Pilih servis</legend>
@@ -447,7 +466,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Cantas &amp; Pengurusan Dahan" />
                 <span class="service-tile__art service-tile__art--cantas" aria-hidden="true"><img src="assets/services/cantas.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Cantas &amp;<br />Pengurusan Dahan</span>
+                <span class="service-tile__name">Cantas &amp; <br />Pengurusan Dahan</span>
                 <span class="service-tile__desc">Mencantas dahan untuk mengawal pertumbuhan pokok, menjaga kesihatan dan memastikan keselamatan persekitaran.</span>
               </label>
             </li>
@@ -455,7 +474,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Pembuangan Tunggul Pokok" />
                 <span class="service-tile__art service-tile__art--tunggul" aria-hidden="true"><img src="assets/services/tunggul.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Pembuangan<br />Tunggul Pokok</span>
+                <span class="service-tile__name">Pembuangan <br />Tunggul Pokok</span>
                 <span class="service-tile__desc">Menghapuskan tunggul pokok hingga ke akar bagi memastikan kawasan lebih bersih, kemas dan selamat.</span>
               </label>
             </li>
@@ -463,7 +482,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Pembersihan Tanah Lot" />
                 <span class="service-tile__art service-tile__art--tanah" aria-hidden="true"><img src="assets/services/tanah.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Pembersihan<br />Tanah Lot</span>
+                <span class="service-tile__name">Pembersihan <br />Tanah Lot</span>
                 <span class="service-tile__desc">Membersihkan kawasan tanah daripada semak samun, rumput dan pokok bagi menyediakan ruang yang lebih bersih dan teratur.</span>
               </label>
             </li>
@@ -471,7 +490,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Servis Menyelamat Dron" />
                 <span class="service-tile__art service-tile__art--dron" aria-hidden="true"><img src="assets/services/dron.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Servis Menyelamat<br />Dron</span>
+                <span class="service-tile__name">Servis Menyelamat <br />Dron</span>
                 <span class="service-tile__desc">Menyelamatkan dron yang tersangkut di pokok atau lokasi tinggi dengan kaedah yang sesuai dan selamat.</span>
               </label>
             </li>
@@ -479,7 +498,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Servis Potong Rumput" />
                 <span class="service-tile__art service-tile__art--rumput" aria-hidden="true"><img src="assets/services/rumput.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Servis Potong<br />Rumput</span>
+                <span class="service-tile__name">Servis Potong <br />Rumput</span>
                 <span class="service-tile__desc">Memotong rumput dan membersihkan kawasan untuk persekitaran yang lebih kemas dan terjaga.</span>
               </label>
             </li>
@@ -487,7 +506,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Sewa Crane &amp; Skylift" />
                 <span class="service-tile__art service-tile__art--crane" aria-hidden="true"><img src="assets/services/crane.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Sewa Crane &amp;<br />Skylift</span>
+                <span class="service-tile__name">Sewa Crane &amp; <br />Skylift</span>
                 <span class="service-tile__desc">Menyediakan sewaan crane dan skylift untuk kerja mengangkat beban serta akses ke kawasan tinggi.</span>
               </label>
             </li>
@@ -501,7 +520,7 @@
                   <img src="assets/brands/stihl.png" width="51" height="12" alt="STIHL" />
                   <img src="assets/brands/husqvarna.svg" width="65.73" height="12" alt="Husqvarna" />
                 </span>
-                <span class="service-tile__desc">Membaiki dan menyelenggara chainsaw bagi<br />memastikan prestasi mesin kekal optimum</span>
+                <span class="service-tile__desc">Membaiki dan menyelenggara chainsaw bagi <br />memastikan prestasi mesin kekal optimum</span>
               </label>
             </li>
           </ul>
@@ -514,7 +533,7 @@
     <!-- Reviews -->
     <section class="reviews" id="ulasan" aria-labelledby="reviews-title">
       <div class="reviews__intro">
-        <h2 class="section-title" id="reviews-title"><span class="text-accent">Kerja Kami.</span><br />Kata Mereka.</h2>
+        <h2 class="section-title" id="reviews-title"><span class="text-accent">Kerja Kami.</span> <br />Kata Mereka.</h2>
         <p class="section-lead">Pengalaman sebenar pelanggan dengan servis pokok, pembersihan tanah, dan pelbagai perkhidmatan kami.</p>
       </div>
 
@@ -632,6 +651,6 @@
     <span>WhatsApp Now</span>
   </a>
 
-  <script src="script.js?v=50"></script>
+  <script src="script.js?v=51"></script>
 </body>
 </html>

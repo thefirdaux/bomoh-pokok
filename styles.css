@@ -1157,49 +1157,555 @@ a.site-menu__item:focus-visible {
   outline-offset: 3px;
 }
 
-/* ---------- Larger screens ---------- */
+/* ---------- Tablet, landscape & desktop (640px and wider) ----------
+   Built from the 1280px "MacBook Air" frame. --u is one design pixel: exactly 1px at 1280px
+   and wider, scaling down evenly on narrower screens, so the layout keeps its proportions.
+   Text sizes have minimums so nothing gets too small to read. */
 
-@media (min-width: 768px) {
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  body {
+    container-type: inline-size;
+  }
+
+  :root {
+    --u: min(1px, calc(100cqw / 1280));
+    --desk-pad: calc(32 * var(--u));
+    --header-height: calc(100 * var(--u));
+    --contact-height: 0px; /* contact bar is phone-only */
+  }
+
+  /* Phone-only pieces */
+  .contact-bar,
+  .menu-toggle,
+  .site-menu,
+  .menu-backdrop {
+    display: none !important;
+  }
+
+  /* ---- Header ---- */
+  .site-header__inner {
+    max-width: none;
+    height: var(--header-height);
+    padding: 0 var(--desk-pad);
+  }
+
+  .brand {
+    gap: calc(15 * var(--u));
+  }
+
+  .brand__logo {
+    padding: 0;
+  }
+
+  .brand__logo img {
+    width: calc(64 * var(--u));
+    height: calc(64 * var(--u));
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .brand__text {
+    padding: 0;
+    gap: calc(6 * var(--u));
+  }
+
+  /* Title3/Emphasized */
+  .brand__name {
+    font-size: max(15px, calc(20 * var(--u)));
+    line-height: 1.25;
+    letter-spacing: -0.45px;
+  }
+
+  /* Subheadline/Regular */
+  .brand__tagline {
+    font-size: max(12px, calc(15 * var(--u)));
+    line-height: 1.33;
+    letter-spacing: -0.23px;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: var(--color-white);
+    font-size: max(13px, calc(15 * var(--u)));
+    line-height: 20px;
+    letter-spacing: -0.23px;
+    white-space: nowrap;
+  }
+
+  .desktop-nav__link,
+  .desktop-nav__lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: calc(144.6 * var(--u));
+    padding: 10px max(6px, calc(10 * var(--u)));
+    border-radius: 8px;
+  }
+
+  .desktop-nav__link:hover,
+  .desktop-nav__link:focus-visible {
+    background: rgba(255, 255, 255, 0.12);
+    outline: none;
+  }
+
+  .desktop-nav__langs {
+    display: flex;
+    gap: 4px;
+  }
+
+  .desktop-nav__code {
+    padding: 1px 7px;
+    border-radius: 99px;
+    background: var(--color-white);
+    color: var(--color-primary);
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .desktop-nav__code--link {
+    background: transparent;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+    color: var(--color-white);
+  }
+
+  .desktop-nav__code--link:hover,
+  .desktop-nav__code--link:focus-visible {
+    background: rgba(255, 255, 255, 0.15);
+    outline: none;
+  }
+
+  /* ---- Hero: photo with a white card, feature cards below ---- */
   .hero {
-    height: 720px;
+    height: auto;
+    overflow: visible;
+    background: transparent;
   }
 
   .hero__media {
-    left: auto;
-    right: 0;
-    width: 50%;
-    height: 100%;
+    left: 0;
+    width: 100%;
+    height: calc(636 * var(--u));
     transform: none;
   }
 
+  .hero__media img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-position: left center;
+  }
+
   .hero__content {
-    padding: 110px var(--gutter) 0;
+    max-width: none;
+    padding: calc(35 * var(--u)) var(--desk-pad) 0;
   }
 
   .hero__intro {
-    width: 420px;
+    justify-content: center;
+    gap: calc(32 * var(--u));
+    width: calc(517 * var(--u));
+    min-width: 300px;
+    height: calc(524 * var(--u));
+    min-height: max-content;
+    padding: calc(24 * var(--u)) calc(16 * var(--u));
+    background: var(--color-white);
+    border-radius: calc(32 * var(--u));
+  }
+
+  .hero__heading {
+    gap: calc(32 * var(--u));
   }
 
   .hero__title {
-    font-size: 44px;
-    line-height: 52px;
+    padding: 0;
+    font-size: max(28px, calc(64 * var(--u)));
+    line-height: 1.047; /* 67 / 64 */
+    letter-spacing: 0.4px;
+  }
+
+  .hero__title br {
+    display: none;
   }
 
   .review-pill {
-    width: 260px;
+    gap: calc(24 * var(--u));
+    width: auto;
+    align-self: flex-start;
+    padding: calc(12 * var(--u)) calc(16 * var(--u));
+    background: #f5f5f5;
+    border: 0;
+    border-radius: 999px;
+    filter: none;
+    font-size: max(14px, calc(18 * var(--u)));
+    font-weight: 600;
+    line-height: calc(28 * var(--u));
+    letter-spacing: -0.43px;
+  }
+
+  .review-pill:hover,
+  .review-pill:focus-visible {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  }
+
+  .review-pill__source {
+    gap: calc(8 * var(--u));
+  }
+
+  .review-pill__source img,
+  .review-pill__star {
+    width: max(20px, calc(32 * var(--u)));
+    height: max(20px, calc(32 * var(--u)));
+  }
+
+  .review-pill__star img {
+    width: 90%;
+    height: auto;
+  }
+
+  .review-pill__rating {
+    align-items: center;
+    gap: 1px;
+    font-size: max(14px, calc(17 * var(--u)));
+  }
+
+  .review-pill__score .odometer {
+    --digit-h: max(18px, calc(22 * var(--u)));
+  }
+
+  .hero__lead {
+    font-size: max(14px, calc(18 * var(--u)));
+    font-weight: 600;
+    line-height: 1.556; /* 28 / 18 */
+    letter-spacing: -0.43px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: calc(24 * var(--u));
+    width: 100%;
+    margin-top: calc(118 * var(--u));
+  }
+
+  .feature {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: calc(24 * var(--u));
+    padding: calc(24 * var(--u)) calc(16 * var(--u));
+    background: #f5f5f5;
+    border: 0;
+    font-size: max(13px, calc(18 * var(--u)));
+    line-height: 1.556;
+    letter-spacing: -0.43px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .feature br {
+    display: none;
+  }
+
+  .feature__icon {
+    width: calc(80 * var(--u));
+    height: calc(80 * var(--u));
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .feature__icon img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .feature__icon--map img {
+    height: auto;
+  }
+
+  /* ---- Projects: centred heading, 2-row gallery of 596x477 photos ---- */
+  .projects {
+    margin-top: 0;
+    padding: calc(86 * var(--u)) 0 calc(22 * var(--u));
+    background: transparent;
+  }
+
+  .projects__intro {
+    padding: 0 var(--desk-pad);
+    text-align: center;
+  }
+
+  .projects__title {
+    color: var(--color-black);
+    font-size: max(30px, calc(64 * var(--u)));
+    line-height: calc(76 * var(--u));
+    letter-spacing: -0.43px;
+  }
+
+  .projects__title .odometer {
+    --digit-h: calc(76 * var(--u));
+  }
+
+  .projects .section-lead {
+    display: none;
+  }
+
+  .gallery {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, calc(477 * var(--u)));
+    grid-auto-columns: calc(596 * var(--u));
+    gap: calc(22 * var(--u));
+    margin-top: calc(39 * var(--u));
+    padding-left: var(--desk-pad);
+    scroll-padding-left: var(--desk-pad);
+    cursor: grab;
+  }
+
+  /* Flatten the phone bento blocks so every photo becomes one grid tile */
+  .gallery__group,
+  .gallery__row {
+    display: contents;
+  }
+
+  .gallery__img--half,
+  .gallery__img--wide,
+  .gallery__img--tall {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ---- Services: wide photo with a white card, 3-column cards ---- */
+  .services {
+    position: relative;
+    padding-bottom: calc(138 * var(--u));
+  }
+
+  .services__banner {
+    height: calc(862 * var(--u));
+    object-position: left center;
+    opacity: 1;
+  }
+
+  .services__body {
+    padding: calc(107 * var(--u)) var(--desk-pad) 0;
+  }
+
+  .services__intro {
+    position: absolute;
+    top: calc(208 * var(--u));
+    left: var(--desk-pad);
+    justify-content: center;
+    gap: calc(37 * var(--u));
+    width: calc(723 * var(--u));
+    min-width: 320px;
+    height: calc(436 * var(--u));
+    padding: calc(32 * var(--u)) calc(24 * var(--u));
+    background: var(--color-white);
+    border-radius: calc(32 * var(--u));
+  }
+
+  .services__title {
+    font-size: max(30px, calc(64 * var(--u)));
+    line-height: 1.2;
+    letter-spacing: -0.43px;
+  }
+
+  .services__text {
+    font-size: max(14px, calc(18 * var(--u)));
+    font-weight: 600;
+    line-height: 1.556;
+    letter-spacing: -0.43px;
+  }
+
+  /* Title1/Regular, centred */
+  .services__hint {
+    margin-top: 0;
+    padding: calc(10 * var(--u));
+    font-size: max(16px, calc(28 * var(--u)));
+    line-height: 1.214; /* 34 / 28 */
+    letter-spacing: 0.38px;
+    text-align: center;
+  }
+
+  .services__hint br {
+    display: none;
   }
 
   .services__grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: calc(22 * var(--u)) calc(24 * var(--u));
+    margin-top: calc(30 * var(--u));
   }
 
+  .service-tile,
+  .service-tile--wide {
+    aspect-ratio: auto;
+    /* 224px at 1280; grows if the text needs more room on smaller screens */
+    height: auto;
+    min-height: max(150px, calc(224 * var(--u)));
+    gap: calc(12 * var(--u));
+    /* Top room so names clear the illustrations poking over the corner */
+    padding: max(72px, calc(76 * var(--u))) calc(24 * var(--u)) calc(24 * var(--u));
+  }
+
+  .service-tile--wide {
+    gap: 0;
+    padding-top: calc(48 * var(--u));
+  }
+
+  .service-tile__name {
+    font-size: max(15px, calc(24 * var(--u)));
+    line-height: 1.25;
+  }
+
+  .service-tile__name br {
+    display: none;
+  }
+
+  .service-tile__desc {
+    font-size: max(11px, calc(15 * var(--u)));
+    line-height: 1.35;
+  }
+
+  .service-tile__desc br {
+    display: none;
+  }
+
+  .service-tile--wide .service-tile__brands {
+    margin-top: calc(12 * var(--u));
+  }
+
+  .service-tile--wide .service-tile__desc {
+    margin-top: calc(16 * var(--u));
+    max-width: 60%;
+  }
+
+  /* Illustrations a little larger on the bigger cards */
+  .service-tile__art {
+    transform: scale(1.4);
+    transform-origin: top right;
+  }
+
+  .service-tile__art--chainsaw {
+    top: calc(56 * var(--u));
+    right: calc(40 * var(--u));
+    transform: scale(1.8);
+  }
+
+  /* Large Title/Regular; light grey with black text until a service is chosen */
   .services__cta {
-    max-width: 370px;
+    width: calc(802 * var(--u));
+    min-width: 300px;
+    max-width: none;
+    height: auto;
+    margin: calc(61 * var(--u)) auto 0;
+    padding: calc(24 * var(--u)) 16px;
+    background: #b8b5b5;
+    color: var(--color-black);
+    font-size: max(18px, calc(34 * var(--u)));
+    line-height: 1.206; /* 41 / 34 */
+    letter-spacing: 0.4px;
   }
 
-  .gallery,
+  .services:has(.service-tile__input:checked) .services__cta {
+    color: var(--color-white);
+  }
+
+  /* ---- Reviews: on the mint background, black heading ---- */
+  .reviews {
+    gap: calc(40 * var(--u));
+    min-height: 0;
+    margin-top: 0;
+    padding: 0 0 calc(96 * var(--u));
+    background: transparent;
+    color: var(--color-black);
+  }
+
+  .reviews__intro {
+    gap: calc(16 * var(--u));
+    padding: 0 var(--desk-pad);
+  }
+
+  .reviews .section-title {
+    font-size: max(30px, calc(64 * var(--u)));
+    font-weight: 600;
+    line-height: 1.047; /* 67 / 64 */
+    letter-spacing: 0.4px;
+  }
+
+  .reviews .section-title .text-accent {
+    color: inherit;
+  }
+
+  .reviews .section-lead {
+    font-size: max(14px, calc(18 * var(--u)));
+    font-weight: 500;
+    line-height: 1.556;
+  }
+
   .reviews__list {
+    padding: 0 var(--desk-pad);
+    scroll-padding-left: var(--desk-pad);
     cursor: grab;
+  }
+
+  .review-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  /* ---- Footer ---- */
+  .site-footer {
+    min-height: 0;
+    padding: calc(48 * var(--u)) var(--desk-pad) calc(56 * var(--u));
+  }
+
+  .site-footer__top {
+    max-width: none;
+  }
+
+  .site-footer__nav ul,
+  .site-footer__label,
+  .site-footer__company-name {
+    font-size: max(13px, calc(15 * var(--u)));
+  }
+
+  .site-footer__social {
+    width: auto;
+  }
+
+  .site-footer__company {
+    margin-top: calc(48 * var(--u));
+  }
+
+  /* Tablets and phones on their side (640-1023px): tagline hidden so the nav fits,
+     services in 2 columns so names and illustrations have room */
+  @media (max-width: 1023px) {
+    .brand__tagline {
+      display: none;
+    }
+
+    .services__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services__wide {
+      grid-column: 1 / -1;
+    }
+
+    .service-tile__art {
+      transform: scale(1.1);
+    }
+
+    .service-tile__art--chainsaw {
+      transform: scale(1.4);
+    }
   }
 }
 

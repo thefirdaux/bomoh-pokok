@@ -69,7 +69,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=50" />
+  <link rel="stylesheet" href="../styles.css?v=51" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -81,6 +81,19 @@
           <span class="brand__tagline">Professional Tree Cutting &amp; Tree Care</span>
         </span>
       </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="desktop-nav__link" href="#projek">Our Projects</a>
+        <a class="desktop-nav__link" href="#servis">Our Services</a>
+        <a class="desktop-nav__link" href="#ulasan">Reviews</a>
+        <a class="desktop-nav__link" href="#servis">Get a Quote</a>
+        <span class="desktop-nav__lang">
+          Language
+          <span class="desktop-nav__langs">
+            <a class="desktop-nav__code desktop-nav__code--link" href="../" hreflang="ms" lang="ms">BM</a>
+            <span class="desktop-nav__code" aria-current="true">EN</span>
+          </span>
+        </span>
+      </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu">
         <img class="menu-toggle__open" src="../assets/menu.svg" width="24" height="24" alt="" />
         <img class="menu-toggle__close" src="../assets/close.svg" width="24" height="24" alt="" />
@@ -117,13 +130,16 @@
     <!-- Hero -->
     <section class="hero" id="utama" aria-labelledby="hero-title">
       <div class="hero__media">
-        <img src="../assets/hero.jpg" alt="Bomoh Pokok worker cutting tree branches with a chainsaw while wearing a safety harness" />
+        <picture>
+          <source media="(min-width: 640px)" srcset="../assets/hero-desktop.jpg" />
+          <img src="../assets/hero.jpg" alt="Bomoh Pokok worker cutting tree branches with a chainsaw while wearing a safety harness" />
+        </picture>
       </div>
 
       <div class="hero__content">
         <div class="hero__intro">
           <div class="hero__heading">
-            <h1 class="hero__title" id="hero-title">Professional<br />Tree Cutting<br />Services</h1>
+            <h1 class="hero__title" id="hero-title">Professional <br />Tree Cutting <br />Services</h1>
 
             <a class="review-pill" href="https://maps.app.goo.gl/sbUfZrj76yN1f9YQ7" target="_blank" rel="noopener" aria-label="Google Review rating 4.8 out of 5">
               <span class="review-pill__source">
@@ -143,15 +159,15 @@
         <ul class="features">
           <li class="feature">
             <span class="feature__icon feature__icon--map"><img src="../assets/feature-semenanjung.png" alt="" /></span>
-            <span>Operating across<br />Peninsular Malaysia</span>
+            <span>Operating across <br />Peninsular Malaysia</span>
           </li>
           <li class="feature">
             <span class="feature__icon"><img src="../assets/feature-consultation.svg" width="40" height="40" alt="" /></span>
-            <span>Professional<br />consultation available</span>
+            <span>Professional <br />consultation available</span>
           </li>
           <li class="feature">
             <span class="feature__icon"><img src="../assets/feature-certified.svg" width="40" height="40" alt="" /></span>
-            <span>Trained &amp;<br />experienced workers</span>
+            <span>Trained &amp; <br />experienced workers</span>
           </li>
         </ul>
       </div>
@@ -161,7 +177,7 @@
     <section class="projects" id="projek" aria-labelledby="projects-title">
       <div class="projects__intro">
         <h2 class="section-title projects__title" id="projects-title">
-          Over <span class="text-accent" data-count-to="1000">1000</span> projects<br />completed by our team
+          Over <span class="text-accent" data-count-to="1000">1000</span> projects <br />completed by our team
         </h2>
         <p class="section-lead">Since 2013</p>
       </div>
@@ -169,276 +185,279 @@
       <div class="scroller gallery" data-scroller data-autoscroll tabindex="0" aria-label="Project gallery">
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" src="../assets/gallery/001.jpg" alt="Bomoh Pokok tree cutting project, photo 1 of 94" loading="lazy" />
-            <img class="gallery__img gallery__img--half" src="../assets/gallery/002.jpg" alt="Bomoh Pokok tree cutting project, photo 2 of 94" loading="lazy" />
+            <img class="gallery__img gallery__img--half" src="../assets/gallery/001.jpg" alt="Bomoh Pokok tree cutting project, photo 1 of 94" loading="lazy" data-src-lg="../assets/gallery/lg/001.jpg" />
+            <img class="gallery__img gallery__img--half" src="../assets/gallery/002.jpg" alt="Bomoh Pokok tree cutting project, photo 2 of 94" loading="lazy" data-src-lg="../assets/gallery/lg/002.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" src="../assets/gallery/003.jpg" alt="Bomoh Pokok tree cutting project, photo 3 of 94" loading="lazy" />
+          <img class="gallery__img gallery__img--wide" src="../assets/gallery/003.jpg" alt="Bomoh Pokok tree cutting project, photo 3 of 94" loading="lazy" data-src-lg="../assets/gallery/lg/003.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" src="../assets/gallery/004.jpg" alt="Bomoh Pokok tree cutting project, photo 4 of 94" loading="lazy" />
+          <img class="gallery__img gallery__img--tall" src="../assets/gallery/004.jpg" alt="Bomoh Pokok tree cutting project, photo 4 of 94" loading="lazy" data-src-lg="../assets/gallery/lg/004.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" src="../assets/gallery/005.jpg" alt="Bomoh Pokok tree cutting project, photo 5 of 94" loading="lazy" />
+          <img class="gallery__img gallery__img--wide" src="../assets/gallery/005.jpg" alt="Bomoh Pokok tree cutting project, photo 5 of 94" loading="lazy" data-src-lg="../assets/gallery/lg/005.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" src="../assets/gallery/006.jpg" alt="Bomoh Pokok tree cutting project, photo 6 of 94" loading="lazy" />
-            <img class="gallery__img gallery__img--half" src="../assets/gallery/007.jpg" alt="Bomoh Pokok tree cutting project, photo 7 of 94" loading="lazy" />
+            <img class="gallery__img gallery__img--half" src="../assets/gallery/006.jpg" alt="Bomoh Pokok tree cutting project, photo 6 of 94" loading="lazy" data-src-lg="../assets/gallery/lg/006.jpg" />
+            <img class="gallery__img gallery__img--half" src="../assets/gallery/007.jpg" alt="Bomoh Pokok tree cutting project, photo 7 of 94" loading="lazy" data-src-lg="../assets/gallery/lg/007.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/008.jpg" alt="Bomoh Pokok tree cutting project, photo 8 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/009.jpg" alt="Bomoh Pokok tree cutting project, photo 9 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/010.jpg" alt="Bomoh Pokok tree cutting project, photo 10 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/011.jpg" alt="Bomoh Pokok tree cutting project, photo 11 of 94" />
-          </div>
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/012.jpg" alt="Bomoh Pokok tree cutting project, photo 12 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/013.jpg" alt="Bomoh Pokok tree cutting project, photo 13 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/014.jpg" alt="Bomoh Pokok tree cutting project, photo 14 of 94" />
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/015.jpg" alt="Bomoh Pokok tree cutting project, photo 15 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/016.jpg" alt="Bomoh Pokok tree cutting project, photo 16 of 94" />
-          </div>
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/017.jpg" alt="Bomoh Pokok tree cutting project, photo 17 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/018.jpg" alt="Bomoh Pokok tree cutting project, photo 18 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/008.jpg" alt="Bomoh Pokok tree cutting project, photo 8 of 94" data-src-lg="../assets/gallery/lg/008.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/009.jpg" alt="Bomoh Pokok tree cutting project, photo 9 of 94" data-src-lg="../assets/gallery/lg/009.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/019.jpg" alt="Bomoh Pokok tree cutting project, photo 19 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/020.jpg" alt="Bomoh Pokok tree cutting project, photo 20 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/010.jpg" alt="Bomoh Pokok tree cutting project, photo 10 of 94" data-src-lg="../assets/gallery/lg/010.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/011.jpg" alt="Bomoh Pokok tree cutting project, photo 11 of 94" data-src-lg="../assets/gallery/lg/011.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/021.jpg" alt="Bomoh Pokok tree cutting project, photo 21 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/012.jpg" alt="Bomoh Pokok tree cutting project, photo 12 of 94" data-src-lg="../assets/gallery/lg/012.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/022.jpg" alt="Bomoh Pokok tree cutting project, photo 22 of 94" />
+          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/013.jpg" alt="Bomoh Pokok tree cutting project, photo 13 of 94" data-src-lg="../assets/gallery/lg/013.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/023.jpg" alt="Bomoh Pokok tree cutting project, photo 23 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/014.jpg" alt="Bomoh Pokok tree cutting project, photo 14 of 94" data-src-lg="../assets/gallery/lg/014.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/024.jpg" alt="Bomoh Pokok tree cutting project, photo 24 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/025.jpg" alt="Bomoh Pokok tree cutting project, photo 25 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/015.jpg" alt="Bomoh Pokok tree cutting project, photo 15 of 94" data-src-lg="../assets/gallery/lg/015.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/016.jpg" alt="Bomoh Pokok tree cutting project, photo 16 of 94" data-src-lg="../assets/gallery/lg/016.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/026.jpg" alt="Bomoh Pokok tree cutting project, photo 26 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/027.jpg" alt="Bomoh Pokok tree cutting project, photo 27 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/028.jpg" alt="Bomoh Pokok tree cutting project, photo 28 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/029.jpg" alt="Bomoh Pokok tree cutting project, photo 29 of 94" />
-          </div>
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/030.jpg" alt="Bomoh Pokok tree cutting project, photo 30 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/031.jpg" alt="Bomoh Pokok tree cutting project, photo 31 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/032.jpg" alt="Bomoh Pokok tree cutting project, photo 32 of 94" />
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/033.jpg" alt="Bomoh Pokok tree cutting project, photo 33 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/034.jpg" alt="Bomoh Pokok tree cutting project, photo 34 of 94" />
-          </div>
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/035.jpg" alt="Bomoh Pokok tree cutting project, photo 35 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/036.jpg" alt="Bomoh Pokok tree cutting project, photo 36 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/017.jpg" alt="Bomoh Pokok tree cutting project, photo 17 of 94" data-src-lg="../assets/gallery/lg/017.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/018.jpg" alt="Bomoh Pokok tree cutting project, photo 18 of 94" data-src-lg="../assets/gallery/lg/018.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/037.jpg" alt="Bomoh Pokok tree cutting project, photo 37 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/038.jpg" alt="Bomoh Pokok tree cutting project, photo 38 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/019.jpg" alt="Bomoh Pokok tree cutting project, photo 19 of 94" data-src-lg="../assets/gallery/lg/019.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/020.jpg" alt="Bomoh Pokok tree cutting project, photo 20 of 94" data-src-lg="../assets/gallery/lg/020.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/039.jpg" alt="Bomoh Pokok tree cutting project, photo 39 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/021.jpg" alt="Bomoh Pokok tree cutting project, photo 21 of 94" data-src-lg="../assets/gallery/lg/021.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/040.jpg" alt="Bomoh Pokok tree cutting project, photo 40 of 94" />
+          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/022.jpg" alt="Bomoh Pokok tree cutting project, photo 22 of 94" data-src-lg="../assets/gallery/lg/022.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/041.jpg" alt="Bomoh Pokok tree cutting project, photo 41 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/023.jpg" alt="Bomoh Pokok tree cutting project, photo 23 of 94" data-src-lg="../assets/gallery/lg/023.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/042.jpg" alt="Bomoh Pokok tree cutting project, photo 42 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/043.jpg" alt="Bomoh Pokok tree cutting project, photo 43 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/024.jpg" alt="Bomoh Pokok tree cutting project, photo 24 of 94" data-src-lg="../assets/gallery/lg/024.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/025.jpg" alt="Bomoh Pokok tree cutting project, photo 25 of 94" data-src-lg="../assets/gallery/lg/025.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/044.jpg" alt="Bomoh Pokok tree cutting project, photo 44 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/045.jpg" alt="Bomoh Pokok tree cutting project, photo 45 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/046.jpg" alt="Bomoh Pokok tree cutting project, photo 46 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/047.jpg" alt="Bomoh Pokok tree cutting project, photo 47 of 94" />
-          </div>
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/048.jpg" alt="Bomoh Pokok tree cutting project, photo 48 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/049.jpg" alt="Bomoh Pokok tree cutting project, photo 49 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/050.jpg" alt="Bomoh Pokok tree cutting project, photo 50 of 94" />
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/051.jpg" alt="Bomoh Pokok tree cutting project, photo 51 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/052.jpg" alt="Bomoh Pokok tree cutting project, photo 52 of 94" />
-          </div>
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/053.jpg" alt="Bomoh Pokok tree cutting project, photo 53 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/054.jpg" alt="Bomoh Pokok tree cutting project, photo 54 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/026.jpg" alt="Bomoh Pokok tree cutting project, photo 26 of 94" data-src-lg="../assets/gallery/lg/026.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/027.jpg" alt="Bomoh Pokok tree cutting project, photo 27 of 94" data-src-lg="../assets/gallery/lg/027.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/055.jpg" alt="Bomoh Pokok tree cutting project, photo 55 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/056.jpg" alt="Bomoh Pokok tree cutting project, photo 56 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/028.jpg" alt="Bomoh Pokok tree cutting project, photo 28 of 94" data-src-lg="../assets/gallery/lg/028.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/029.jpg" alt="Bomoh Pokok tree cutting project, photo 29 of 94" data-src-lg="../assets/gallery/lg/029.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/057.jpg" alt="Bomoh Pokok tree cutting project, photo 57 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/030.jpg" alt="Bomoh Pokok tree cutting project, photo 30 of 94" data-src-lg="../assets/gallery/lg/030.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/058.jpg" alt="Bomoh Pokok tree cutting project, photo 58 of 94" />
+          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/031.jpg" alt="Bomoh Pokok tree cutting project, photo 31 of 94" data-src-lg="../assets/gallery/lg/031.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/059.jpg" alt="Bomoh Pokok tree cutting project, photo 59 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/032.jpg" alt="Bomoh Pokok tree cutting project, photo 32 of 94" data-src-lg="../assets/gallery/lg/032.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/060.jpg" alt="Bomoh Pokok tree cutting project, photo 60 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/061.jpg" alt="Bomoh Pokok tree cutting project, photo 61 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/033.jpg" alt="Bomoh Pokok tree cutting project, photo 33 of 94" data-src-lg="../assets/gallery/lg/033.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/034.jpg" alt="Bomoh Pokok tree cutting project, photo 34 of 94" data-src-lg="../assets/gallery/lg/034.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/062.jpg" alt="Bomoh Pokok tree cutting project, photo 62 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/063.jpg" alt="Bomoh Pokok tree cutting project, photo 63 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/064.jpg" alt="Bomoh Pokok tree cutting project, photo 64 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/065.jpg" alt="Bomoh Pokok tree cutting project, photo 65 of 94" />
-          </div>
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/066.jpg" alt="Bomoh Pokok tree cutting project, photo 66 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/067.jpg" alt="Bomoh Pokok tree cutting project, photo 67 of 94" />
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/068.jpg" alt="Bomoh Pokok tree cutting project, photo 68 of 94" />
-          <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/069.jpg" alt="Bomoh Pokok tree cutting project, photo 69 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/070.jpg" alt="Bomoh Pokok tree cutting project, photo 70 of 94" />
-          </div>
-        </div>
-
-        <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/071.jpg" alt="Bomoh Pokok tree cutting project, photo 71 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/072.jpg" alt="Bomoh Pokok tree cutting project, photo 72 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/035.jpg" alt="Bomoh Pokok tree cutting project, photo 35 of 94" data-src-lg="../assets/gallery/lg/035.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/036.jpg" alt="Bomoh Pokok tree cutting project, photo 36 of 94" data-src-lg="../assets/gallery/lg/036.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/073.jpg" alt="Bomoh Pokok tree cutting project, photo 73 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/074.jpg" alt="Bomoh Pokok tree cutting project, photo 74 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/037.jpg" alt="Bomoh Pokok tree cutting project, photo 37 of 94" data-src-lg="../assets/gallery/lg/037.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/038.jpg" alt="Bomoh Pokok tree cutting project, photo 38 of 94" data-src-lg="../assets/gallery/lg/038.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/075.jpg" alt="Bomoh Pokok tree cutting project, photo 75 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/039.jpg" alt="Bomoh Pokok tree cutting project, photo 39 of 94" data-src-lg="../assets/gallery/lg/039.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/076.jpg" alt="Bomoh Pokok tree cutting project, photo 76 of 94" />
+          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/040.jpg" alt="Bomoh Pokok tree cutting project, photo 40 of 94" data-src-lg="../assets/gallery/lg/040.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/077.jpg" alt="Bomoh Pokok tree cutting project, photo 77 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/041.jpg" alt="Bomoh Pokok tree cutting project, photo 41 of 94" data-src-lg="../assets/gallery/lg/041.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/078.jpg" alt="Bomoh Pokok tree cutting project, photo 78 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/079.jpg" alt="Bomoh Pokok tree cutting project, photo 79 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/042.jpg" alt="Bomoh Pokok tree cutting project, photo 42 of 94" data-src-lg="../assets/gallery/lg/042.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/043.jpg" alt="Bomoh Pokok tree cutting project, photo 43 of 94" data-src-lg="../assets/gallery/lg/043.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/080.jpg" alt="Bomoh Pokok tree cutting project, photo 80 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/081.jpg" alt="Bomoh Pokok tree cutting project, photo 81 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/044.jpg" alt="Bomoh Pokok tree cutting project, photo 44 of 94" data-src-lg="../assets/gallery/lg/044.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/045.jpg" alt="Bomoh Pokok tree cutting project, photo 45 of 94" data-src-lg="../assets/gallery/lg/045.jpg" />
         </div>
 
         <div class="gallery__group">
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/082.jpg" alt="Bomoh Pokok tree cutting project, photo 82 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/083.jpg" alt="Bomoh Pokok tree cutting project, photo 83 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/046.jpg" alt="Bomoh Pokok tree cutting project, photo 46 of 94" data-src-lg="../assets/gallery/lg/046.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/047.jpg" alt="Bomoh Pokok tree cutting project, photo 47 of 94" data-src-lg="../assets/gallery/lg/047.jpg" />
           </div>
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/084.jpg" alt="Bomoh Pokok tree cutting project, photo 84 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/048.jpg" alt="Bomoh Pokok tree cutting project, photo 48 of 94" data-src-lg="../assets/gallery/lg/048.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/085.jpg" alt="Bomoh Pokok tree cutting project, photo 85 of 94" />
+          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/049.jpg" alt="Bomoh Pokok tree cutting project, photo 49 of 94" data-src-lg="../assets/gallery/lg/049.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/050.jpg" alt="Bomoh Pokok tree cutting project, photo 50 of 94" data-src-lg="../assets/gallery/lg/050.jpg" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/086.jpg" alt="Bomoh Pokok tree cutting project, photo 86 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/087.jpg" alt="Bomoh Pokok tree cutting project, photo 87 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/051.jpg" alt="Bomoh Pokok tree cutting project, photo 51 of 94" data-src-lg="../assets/gallery/lg/051.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/052.jpg" alt="Bomoh Pokok tree cutting project, photo 52 of 94" data-src-lg="../assets/gallery/lg/052.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/088.jpg" alt="Bomoh Pokok tree cutting project, photo 88 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/089.jpg" alt="Bomoh Pokok tree cutting project, photo 89 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/053.jpg" alt="Bomoh Pokok tree cutting project, photo 53 of 94" data-src-lg="../assets/gallery/lg/053.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/054.jpg" alt="Bomoh Pokok tree cutting project, photo 54 of 94" data-src-lg="../assets/gallery/lg/054.jpg" />
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/090.jpg" alt="Bomoh Pokok tree cutting project, photo 90 of 94" />
           <div class="gallery__row">
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/091.jpg" alt="Bomoh Pokok tree cutting project, photo 91 of 94" />
-            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/092.jpg" alt="Bomoh Pokok tree cutting project, photo 92 of 94" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/055.jpg" alt="Bomoh Pokok tree cutting project, photo 55 of 94" data-src-lg="../assets/gallery/lg/055.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/056.jpg" alt="Bomoh Pokok tree cutting project, photo 56 of 94" data-src-lg="../assets/gallery/lg/056.jpg" />
+          </div>
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/057.jpg" alt="Bomoh Pokok tree cutting project, photo 57 of 94" data-src-lg="../assets/gallery/lg/057.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/058.jpg" alt="Bomoh Pokok tree cutting project, photo 58 of 94" data-src-lg="../assets/gallery/lg/058.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/059.jpg" alt="Bomoh Pokok tree cutting project, photo 59 of 94" data-src-lg="../assets/gallery/lg/059.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/060.jpg" alt="Bomoh Pokok tree cutting project, photo 60 of 94" data-src-lg="../assets/gallery/lg/060.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/061.jpg" alt="Bomoh Pokok tree cutting project, photo 61 of 94" data-src-lg="../assets/gallery/lg/061.jpg" />
           </div>
         </div>
 
         <div class="gallery__group">
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/093.jpg" alt="Bomoh Pokok tree cutting project, photo 93 of 94" />
-          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/094.jpg" alt="Bomoh Pokok tree cutting project, photo 94 of 94" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/062.jpg" alt="Bomoh Pokok tree cutting project, photo 62 of 94" data-src-lg="../assets/gallery/lg/062.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/063.jpg" alt="Bomoh Pokok tree cutting project, photo 63 of 94" data-src-lg="../assets/gallery/lg/063.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/064.jpg" alt="Bomoh Pokok tree cutting project, photo 64 of 94" data-src-lg="../assets/gallery/lg/064.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/065.jpg" alt="Bomoh Pokok tree cutting project, photo 65 of 94" data-src-lg="../assets/gallery/lg/065.jpg" />
+          </div>
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/066.jpg" alt="Bomoh Pokok tree cutting project, photo 66 of 94" data-src-lg="../assets/gallery/lg/066.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/067.jpg" alt="Bomoh Pokok tree cutting project, photo 67 of 94" data-src-lg="../assets/gallery/lg/067.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/068.jpg" alt="Bomoh Pokok tree cutting project, photo 68 of 94" data-src-lg="../assets/gallery/lg/068.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/069.jpg" alt="Bomoh Pokok tree cutting project, photo 69 of 94" data-src-lg="../assets/gallery/lg/069.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/070.jpg" alt="Bomoh Pokok tree cutting project, photo 70 of 94" data-src-lg="../assets/gallery/lg/070.jpg" />
+          </div>
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/071.jpg" alt="Bomoh Pokok tree cutting project, photo 71 of 94" data-src-lg="../assets/gallery/lg/071.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/072.jpg" alt="Bomoh Pokok tree cutting project, photo 72 of 94" data-src-lg="../assets/gallery/lg/072.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/073.jpg" alt="Bomoh Pokok tree cutting project, photo 73 of 94" data-src-lg="../assets/gallery/lg/073.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/074.jpg" alt="Bomoh Pokok tree cutting project, photo 74 of 94" data-src-lg="../assets/gallery/lg/074.jpg" />
+          </div>
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/075.jpg" alt="Bomoh Pokok tree cutting project, photo 75 of 94" data-src-lg="../assets/gallery/lg/075.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--tall" data-src="../assets/gallery/076.jpg" alt="Bomoh Pokok tree cutting project, photo 76 of 94" data-src-lg="../assets/gallery/lg/076.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/077.jpg" alt="Bomoh Pokok tree cutting project, photo 77 of 94" data-src-lg="../assets/gallery/lg/077.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/078.jpg" alt="Bomoh Pokok tree cutting project, photo 78 of 94" data-src-lg="../assets/gallery/lg/078.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/079.jpg" alt="Bomoh Pokok tree cutting project, photo 79 of 94" data-src-lg="../assets/gallery/lg/079.jpg" />
+          </div>
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/080.jpg" alt="Bomoh Pokok tree cutting project, photo 80 of 94" data-src-lg="../assets/gallery/lg/080.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/081.jpg" alt="Bomoh Pokok tree cutting project, photo 81 of 94" data-src-lg="../assets/gallery/lg/081.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/082.jpg" alt="Bomoh Pokok tree cutting project, photo 82 of 94" data-src-lg="../assets/gallery/lg/082.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/083.jpg" alt="Bomoh Pokok tree cutting project, photo 83 of 94" data-src-lg="../assets/gallery/lg/083.jpg" />
+          </div>
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/084.jpg" alt="Bomoh Pokok tree cutting project, photo 84 of 94" data-src-lg="../assets/gallery/lg/084.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/085.jpg" alt="Bomoh Pokok tree cutting project, photo 85 of 94" data-src-lg="../assets/gallery/lg/085.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/086.jpg" alt="Bomoh Pokok tree cutting project, photo 86 of 94" data-src-lg="../assets/gallery/lg/086.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/087.jpg" alt="Bomoh Pokok tree cutting project, photo 87 of 94" data-src-lg="../assets/gallery/lg/087.jpg" />
+          </div>
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/088.jpg" alt="Bomoh Pokok tree cutting project, photo 88 of 94" data-src-lg="../assets/gallery/lg/088.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/089.jpg" alt="Bomoh Pokok tree cutting project, photo 89 of 94" data-src-lg="../assets/gallery/lg/089.jpg" />
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/090.jpg" alt="Bomoh Pokok tree cutting project, photo 90 of 94" data-src-lg="../assets/gallery/lg/090.jpg" />
+          <div class="gallery__row">
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/091.jpg" alt="Bomoh Pokok tree cutting project, photo 91 of 94" data-src-lg="../assets/gallery/lg/091.jpg" />
+            <img class="gallery__img gallery__img--half" data-src="../assets/gallery/092.jpg" alt="Bomoh Pokok tree cutting project, photo 92 of 94" data-src-lg="../assets/gallery/lg/092.jpg" />
+          </div>
+        </div>
+
+        <div class="gallery__group">
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/093.jpg" alt="Bomoh Pokok tree cutting project, photo 93 of 94" data-src-lg="../assets/gallery/lg/093.jpg" />
+          <img class="gallery__img gallery__img--wide" data-src="../assets/gallery/094.jpg" alt="Bomoh Pokok tree cutting project, photo 94 of 94" data-src-lg="../assets/gallery/lg/094.jpg" />
         </div>
       </div>
     </section>
 
     <!-- Services -->
     <section class="services" id="servis" aria-labelledby="services-title">
-      <img class="services__banner" src="../assets/services-bg.jpg" width="640" height="800" alt="Bomoh Pokok worker climbing a tree wearing a helmet and safety harness" loading="lazy" />
+      <picture>
+        <source media="(min-width: 640px)" srcset="../assets/services-banner-desktop.jpg" />
+        <img class="services__banner" src="../assets/services-bg.jpg" width="640" height="800" alt="Bomoh Pokok worker climbing a tree wearing a helmet and safety harness" loading="lazy" />
+      </picture>
 
       <div class="services__body">
         <div class="services__intro">
-          <h2 class="section-title services__title" id="services-title"><span class="text-accent">More Than</span><br />Just Tree Cutting</h2>
+          <h2 class="section-title services__title" id="services-title"><span class="text-accent">More Than</span> <br />Just Tree Cutting</h2>
           <p class="services__text">Bomoh Pokok also provides a range of professional services for trees, land and work at height across Peninsular Malaysia.</p>
         </div>
 
-        <p class="services__hint">Choose one type of service to get<br />a free quote.</p>
+        <p class="services__hint">Choose one type of service to get <br />a free quote.</p>
 
         <fieldset class="services__picker">
           <legend class="visually-hidden">Choose a service</legend>
@@ -447,7 +466,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Tree Pruning &amp; Trimming" />
                 <span class="service-tile__art service-tile__art--cantas" aria-hidden="true"><img src="../assets/services/cantas.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Tree Pruning<br />&amp; Trimming</span>
+                <span class="service-tile__name">Tree Pruning <br />&amp; Trimming</span>
                 <span class="service-tile__desc">Trimming branches to control growth, keep trees healthy and keep the surroundings safe.</span>
               </label>
             </li>
@@ -455,7 +474,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Tree Stump Removal" />
                 <span class="service-tile__art service-tile__art--tunggul" aria-hidden="true"><img src="../assets/services/tunggul.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Tree Stump<br />Removal</span>
+                <span class="service-tile__name">Tree Stump <br />Removal</span>
                 <span class="service-tile__desc">Removing tree stumps down to the roots so the area is cleaner, tidier and safer.</span>
               </label>
             </li>
@@ -463,7 +482,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Land Lot Clearing" />
                 <span class="service-tile__art service-tile__art--tanah" aria-hidden="true"><img src="../assets/services/tanah.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Land Lot<br />Clearing</span>
+                <span class="service-tile__name">Land Lot <br />Clearing</span>
                 <span class="service-tile__desc">Clearing land of bushes, grass and trees to create a cleaner, more orderly space.</span>
               </label>
             </li>
@@ -471,7 +490,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Drone Rescue Service" />
                 <span class="service-tile__art service-tile__art--dron" aria-hidden="true"><img src="../assets/services/dron.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Drone Rescue<br />Service</span>
+                <span class="service-tile__name">Drone Rescue <br />Service</span>
                 <span class="service-tile__desc">Retrieving drones stuck in trees or other high places using safe, suitable methods.</span>
               </label>
             </li>
@@ -479,7 +498,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Lawn Mowing Service" />
                 <span class="service-tile__art service-tile__art--rumput" aria-hidden="true"><img src="../assets/services/rumput.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Lawn Mowing<br />Service</span>
+                <span class="service-tile__name">Lawn Mowing <br />Service</span>
                 <span class="service-tile__desc">Cutting grass and tidying the area for a neater, well-kept environment.</span>
               </label>
             </li>
@@ -487,7 +506,7 @@
               <label class="service-tile">
                 <input class="service-tile__input" type="radio" name="service" value="Crane &amp; Skylift Rental" />
                 <span class="service-tile__art service-tile__art--crane" aria-hidden="true"><img src="../assets/services/crane.png" alt="" loading="lazy" /></span>
-                <span class="service-tile__name">Crane &amp; Skylift<br />Rental</span>
+                <span class="service-tile__name">Crane &amp; Skylift <br />Rental</span>
                 <span class="service-tile__desc">Crane and skylift rental for lifting heavy loads and reaching high areas.</span>
               </label>
             </li>
@@ -501,7 +520,7 @@
                   <img src="../assets/brands/stihl.png" width="51" height="12" alt="STIHL" />
                   <img src="../assets/brands/husqvarna.svg" width="65.73" height="12" alt="Husqvarna" />
                 </span>
-                <span class="service-tile__desc">Repairing and servicing chainsaws<br />to keep them running at their best</span>
+                <span class="service-tile__desc">Repairing and servicing chainsaws <br />to keep them running at their best</span>
               </label>
             </li>
           </ul>
@@ -514,7 +533,7 @@
     <!-- Reviews -->
     <section class="reviews" id="ulasan" aria-labelledby="reviews-title">
       <div class="reviews__intro">
-        <h2 class="section-title" id="reviews-title"><span class="text-accent">Our Work.</span><br />Their Words.</h2>
+        <h2 class="section-title" id="reviews-title"><span class="text-accent">Our Work.</span> <br />Their Words.</h2>
         <p class="section-lead">Real experiences from customers of our tree services, land clearing and more.</p>
       </div>
 
@@ -632,6 +651,6 @@
     <span>WhatsApp Now</span>
   </a>
 
-  <script src="../script.js?v=50"></script>
+  <script src="../script.js?v=51"></script>
 </body>
 </html>

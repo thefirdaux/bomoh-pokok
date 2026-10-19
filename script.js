@@ -94,7 +94,9 @@
     var lastTime = null;
 
     function measure() {
-      loopWidth = firstClone.offsetLeft - originals[0].offsetLeft;
+      // Measured from the first photo of each set: on desktop the blocks are flattened into a
+      // 2-row grid (display: contents), so the block elements themselves have no position
+      loopWidth = firstClone.querySelector("img").offsetLeft - originals[0].querySelector("img").offsetLeft;
     }
 
     function hold(reason) {
@@ -184,13 +186,29 @@
 
   // Gallery photos past the first few blocks carry data-src and load only as they
   // approach the visible part of the gallery (native lazy loading fetches far too early)
+  // On tablet/desktop (640px+) the sharper data-src-lg copy is used instead
+  var desktopQuery = window.matchMedia("(min-width: 640px)");
+
   document.querySelectorAll(".gallery").forEach(function (gallery) {
     var pending = gallery.querySelectorAll("img[data-src]");
 
     function load(img) {
-      img.src = img.getAttribute("data-src");
+      var large = desktopQuery.matches && img.getAttribute("data-src-lg");
+      img.src = large || img.getAttribute("data-src");
       img.removeAttribute("data-src");
     }
+
+    // Photos already loaded at phone size are swapped for the sharp copy on larger screens
+    function upgrade() {
+      if (!desktopQuery.matches) return;
+      gallery.querySelectorAll("img[data-src-lg]:not([data-src])").forEach(function (img) {
+        var large = img.getAttribute("data-src-lg");
+        if (img.getAttribute("src") !== large) img.src = large;
+      });
+    }
+
+    upgrade();
+    if (desktopQuery.addEventListener) desktopQuery.addEventListener("change", upgrade);
 
     if (!("IntersectionObserver" in window)) {
       Array.prototype.forEach.call(pending, load);
