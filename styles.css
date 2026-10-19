@@ -1618,14 +1618,11 @@ a.site-menu__item:focus-visible {
     color: var(--color-white);
   }
 
-  /* ---- Reviews: on the mint background, black heading ---- */
+  /* ---- Reviews: same dark green block, white text and orange accent as on phones ---- */
   .reviews {
     gap: calc(40 * var(--u));
     min-height: 0;
-    margin-top: 0;
-    padding: 0 0 calc(96 * var(--u));
-    background: transparent;
-    color: var(--color-black);
+    padding: calc(72 * var(--u)) 0 calc(80 * var(--u));
   }
 
   .reviews__intro {
@@ -1640,9 +1637,6 @@ a.site-menu__item:focus-visible {
     letter-spacing: 0.4px;
   }
 
-  .reviews .section-title .text-accent {
-    color: inherit;
-  }
 
   .reviews .section-lead {
     font-size: max(14px, calc(18 * var(--u)));
