@@ -1046,15 +1046,17 @@ a.site-menu__item:focus-visible {
   outline: none;
 }
 
+/* Grid as wide as its widest pill, so the TikTok and Facebook pills match in width */
 .site-footer__social {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  justify-items: stretch;
+  align-content: start;
   gap: 8px;
-  width: 130px;
+  width: max-content;
 }
 
 .site-footer__social .site-footer__label {
+  justify-self: start;
   margin-bottom: 8.44px;
 }
 
@@ -1675,10 +1677,6 @@ a.site-menu__item:focus-visible {
   .site-footer__label,
   .site-footer__company-name {
     font-size: max(13px, calc(15 * var(--u)));
-  }
-
-  .site-footer__social {
-    width: auto;
   }
 
   .site-footer__company {
