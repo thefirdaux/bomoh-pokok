@@ -1047,7 +1047,15 @@ a.site-menu__item:focus-visible {
 }
 
 .site-footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   width: 130px;
+}
+
+.site-footer__social .site-footer__label {
+  margin-bottom: 8.44px;
 }
 
 /* Caption1/Regular */
@@ -1056,12 +1064,11 @@ a.site-menu__item:focus-visible {
   line-height: 16px;
 }
 
-/* White pill linking to TikTok */
+/* White pills linking to TikTok and Facebook */
 .social-pill {
   display: inline-flex;
   align-items: center;
   gap: 8.15px;
-  margin-top: 16.44px;
   padding: 8.89px 11.85px;
   background: var(--color-white);
   border-radius: 73px;
