@@ -457,6 +457,20 @@ a.site-menu__item:focus-visible {
   object-fit: cover;
 }
 
+/* White fade over the trees and city at the bottom so the feature rows stay readable */
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 56%,
+    rgba(255, 255, 255, 0.82) 66%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  pointer-events: none;
+}
+
 .hero__content {
   position: relative;
   max-width: var(--content-max);
@@ -1310,6 +1324,10 @@ a.site-menu__item:focus-visible {
     width: 100%;
     height: 100%;
     object-position: left center;
+  }
+
+  .hero__media::after {
+    display: none;
   }
 
   .hero__content {
