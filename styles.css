@@ -36,6 +36,9 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
+  /* clip, not hidden: with container-type on body (640px+), hidden turns body into its own
+     scroll box and the sticky header and contact bar stop sticking */
+  overflow-x: clip;
   /* Green so the area under Safari's toolbar and past the footer matches the footer.
      The page content itself is mint (main + contact bar). */
   background: var(--color-primary);
@@ -1193,15 +1196,21 @@ a.site-menu__item:focus-visible {
     --u: min(1px, calc(100cqw / 1280));
     --desk-pad: calc(32 * var(--u));
     --header-height: calc(100 * var(--u));
-    --contact-height: 0px; /* contact bar is phone-only */
+    --contact-height: max(44px, calc(56 * var(--u)));
   }
 
   /* Phone-only pieces */
-  .contact-bar,
   .menu-toggle,
   .site-menu,
   .menu-backdrop {
     display: none !important;
+  }
+
+  /* Contact bar stays pinned under the header, as on phones */
+  .contact-bar {
+    padding: 8px var(--desk-pad);
+    font-size: max(15px, calc(18 * var(--u)));
+    line-height: 1.4;
   }
 
   /* ---- Header ---- */
